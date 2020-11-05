@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2247BF5C5614D9544C323464 /* Pods_Hiking_HikingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A0E7B9108FE7649163308E /* Pods_Hiking_HikingUITests.framework */; };
+		6E3580F1CAC6EF91344BC53A /* Pods_Hiking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E7A92491F499F906516854 /* Pods_Hiking.framework */; };
 		79FAA81D2552AD1E00C0F4BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAA81C2552AD1E00C0F4BE /* AppDelegate.swift */; };
 		79FAA81F2552AD1E00C0F4BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAA81E2552AD1E00C0F4BE /* SceneDelegate.swift */; };
 		79FAA8242552AD1E00C0F4BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FAA8222552AD1E00C0F4BE /* Main.storyboard */; };
@@ -22,6 +24,10 @@
 		79FAA8732552AFAF00C0F4BE /* E1_CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAA8722552AFAF00C0F4BE /* E1_CommunityViewController.swift */; };
 		79FAA8842552B00000C0F4BE /* F1_SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAA8832552B00000C0F4BE /* F1_SettingViewController.swift */; };
 		79FAA8892552B30F00C0F4BE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAA8882552B30F00C0F4BE /* TabBarViewController.swift */; };
+		79FAA8942553AFDA00C0F4BE /* A_HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAA8932553AFDA00C0F4BE /* A_HomePageViewController.swift */; };
+		79FAA8A22553B5CE00C0F4BE /* A2_HomeRouteSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAA8A12553B5CE00C0F4BE /* A2_HomeRouteSelectionViewController.swift */; };
+		79FAA8A72553B5E600C0F4BE /* A3_HomeRouteDrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAA8A62553B5E600C0F4BE /* A3_HomeRouteDrawViewController.swift */; };
+		865D45D02A3C3D2288E2F9F6 /* Pods_HikingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58D1B5F630A37CD287886084 /* Pods_HikingTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40E7A92491F499F906516854 /* Pods_Hiking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hiking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58D1B5F630A37CD287886084 /* Pods_HikingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HikingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C6D580A41AE29411881E1C4 /* Pods-Hiking-HikingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hiking-HikingUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hiking-HikingUITests/Pods-Hiking-HikingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		79FAA8192552AD1E00C0F4BE /* Hiking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hiking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FAA81C2552AD1E00C0F4BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79FAA81E2552AD1E00C0F4BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +72,15 @@
 		79FAA8722552AFAF00C0F4BE /* E1_CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E1_CommunityViewController.swift; sourceTree = "<group>"; };
 		79FAA8832552B00000C0F4BE /* F1_SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F1_SettingViewController.swift; sourceTree = "<group>"; };
 		79FAA8882552B30F00C0F4BE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		79FAA8932553AFDA00C0F4BE /* A_HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_HomePageViewController.swift; sourceTree = "<group>"; };
+		79FAA8A12553B5CE00C0F4BE /* A2_HomeRouteSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A2_HomeRouteSelectionViewController.swift; sourceTree = "<group>"; };
+		79FAA8A62553B5E600C0F4BE /* A3_HomeRouteDrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A3_HomeRouteDrawViewController.swift; sourceTree = "<group>"; };
+		97277E069AA39875CB21D83D /* Pods-Hiking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hiking.release.xcconfig"; path = "Target Support Files/Pods-Hiking/Pods-Hiking.release.xcconfig"; sourceTree = "<group>"; };
+		AF653BD82EBA4986549F1725 /* Pods-HikingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HikingTests.release.xcconfig"; path = "Target Support Files/Pods-HikingTests/Pods-HikingTests.release.xcconfig"; sourceTree = "<group>"; };
+		C2D2A070CD43E3D328C014D6 /* Pods-Hiking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hiking.debug.xcconfig"; path = "Target Support Files/Pods-Hiking/Pods-Hiking.debug.xcconfig"; sourceTree = "<group>"; };
+		C3A0E7B9108FE7649163308E /* Pods_Hiking_HikingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hiking_HikingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C85FF5B01CD9746B8AD052A6 /* Pods-HikingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HikingTests.debug.xcconfig"; path = "Target Support Files/Pods-HikingTests/Pods-HikingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF1CF85D0AF170A7815AD7A6 /* Pods-Hiking-HikingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hiking-HikingUITests.release.xcconfig"; path = "Target Support Files/Pods-Hiking-HikingUITests/Pods-Hiking-HikingUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3580F1CAC6EF91344BC53A /* Pods_Hiking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				865D45D02A3C3D2288E2F9F6 /* Pods_HikingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,12 +104,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2247BF5C5614D9544C323464 /* Pods_Hiking_HikingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37A2BF114ACFFD386A1FB177 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40E7A92491F499F906516854 /* Pods_Hiking.framework */,
+				C3A0E7B9108FE7649163308E /* Pods_Hiking_HikingUITests.framework */,
+				58D1B5F630A37CD287886084 /* Pods_HikingTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		79FAA8102552AD1E00C0F4BE = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +128,8 @@
 				79FAA8352552AD2100C0F4BE /* HikingTests */,
 				79FAA8402552AD2100C0F4BE /* HikingUITests */,
 				79FAA81A2552AD1E00C0F4BE /* Products */,
+				F8DAA024CA7C92FB804E2D55 /* Pods */,
+				37A2BF114ACFFD386A1FB177 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,7 +148,10 @@
 			children = (
 				79FAA8552552AEB200C0F4BE /* GlobalVariables.swift */,
 				79FAA8882552B30F00C0F4BE /* TabBarViewController.swift */,
+				79FAA8932553AFDA00C0F4BE /* A_HomePageViewController.swift */,
 				79FAA8632552AF6E00C0F4BE /* A1_HomeViewController.swift */,
+				79FAA8A12553B5CE00C0F4BE /* A2_HomeRouteSelectionViewController.swift */,
+				79FAA8A62553B5E600C0F4BE /* A3_HomeRouteDrawViewController.swift */,
 				79FAA8682552AF8A00C0F4BE /* C1_ActivityViewController.swift */,
 				79FAA86D2552AF9A00C0F4BE /* D1_AchievementViewController.swift */,
 				79FAA8722552AFAF00C0F4BE /* E1_CommunityViewController.swift */,
@@ -149,6 +185,20 @@
 			path = HikingUITests;
 			sourceTree = "<group>";
 		};
+		F8DAA024CA7C92FB804E2D55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2D2A070CD43E3D328C014D6 /* Pods-Hiking.debug.xcconfig */,
+				97277E069AA39875CB21D83D /* Pods-Hiking.release.xcconfig */,
+				6C6D580A41AE29411881E1C4 /* Pods-Hiking-HikingUITests.debug.xcconfig */,
+				DF1CF85D0AF170A7815AD7A6 /* Pods-Hiking-HikingUITests.release.xcconfig */,
+				C85FF5B01CD9746B8AD052A6 /* Pods-HikingTests.debug.xcconfig */,
+				AF653BD82EBA4986549F1725 /* Pods-HikingTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79FAA8462552AD2100C0F4BE /* Build configuration list for PBXNativeTarget "Hiking" */;
 			buildPhases = (
+				DE66DBA731D3DA69374FD107 /* [CP] Check Pods Manifest.lock */,
 				79FAA8152552AD1E00C0F4BE /* Sources */,
 				79FAA8162552AD1E00C0F4BE /* Frameworks */,
 				79FAA8172552AD1E00C0F4BE /* Resources */,
@@ -173,6 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79FAA8492552AD2100C0F4BE /* Build configuration list for PBXNativeTarget "HikingTests" */;
 			buildPhases = (
+				E21C6102D29FBD0FAD3EC8D2 /* [CP] Check Pods Manifest.lock */,
 				79FAA82E2552AD2100C0F4BE /* Sources */,
 				79FAA82F2552AD2100C0F4BE /* Frameworks */,
 				79FAA8302552AD2100C0F4BE /* Resources */,
@@ -191,6 +243,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79FAA84C2552AD2100C0F4BE /* Build configuration list for PBXNativeTarget "HikingUITests" */;
 			buildPhases = (
+				08335F59C107FDC9B2D11B83 /* [CP] Check Pods Manifest.lock */,
 				79FAA8392552AD2100C0F4BE /* Sources */,
 				79FAA83A2552AD2100C0F4BE /* Frameworks */,
 				79FAA83B2552AD2100C0F4BE /* Resources */,
@@ -274,6 +327,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08335F59C107FDC9B2D11B83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hiking-HikingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE66DBA731D3DA69374FD107 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hiking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E21C6102D29FBD0FAD3EC8D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HikingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		79FAA8152552AD1E00C0F4BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -282,12 +404,15 @@
 				79FAA8842552B00000C0F4BE /* F1_SettingViewController.swift in Sources */,
 				79FAA8272552AD1E00C0F4BE /* Hiking.xcdatamodeld in Sources */,
 				79FAA81D2552AD1E00C0F4BE /* AppDelegate.swift in Sources */,
+				79FAA8A22553B5CE00C0F4BE /* A2_HomeRouteSelectionViewController.swift in Sources */,
 				79FAA8692552AF8A00C0F4BE /* C1_ActivityViewController.swift in Sources */,
 				79FAA8642552AF6E00C0F4BE /* A1_HomeViewController.swift in Sources */,
 				79FAA81F2552AD1E00C0F4BE /* SceneDelegate.swift in Sources */,
 				79FAA8732552AFAF00C0F4BE /* E1_CommunityViewController.swift in Sources */,
 				79FAA86E2552AF9A00C0F4BE /* D1_AchievementViewController.swift in Sources */,
 				79FAA8892552B30F00C0F4BE /* TabBarViewController.swift in Sources */,
+				79FAA8942553AFDA00C0F4BE /* A_HomePageViewController.swift in Sources */,
+				79FAA8A72553B5E600C0F4BE /* A3_HomeRouteDrawViewController.swift in Sources */,
 				79FAA8562552AEB200C0F4BE /* GlobalVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +586,7 @@
 		};
 		79FAA8472552AD2100C0F4BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2D2A070CD43E3D328C014D6 /* Pods-Hiking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -480,6 +606,7 @@
 		};
 		79FAA8482552AD2100C0F4BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97277E069AA39875CB21D83D /* Pods-Hiking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -499,6 +626,7 @@
 		};
 		79FAA84A2552AD2100C0F4BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C85FF5B01CD9746B8AD052A6 /* Pods-HikingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -521,6 +649,7 @@
 		};
 		79FAA84B2552AD2100C0F4BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF653BD82EBA4986549F1725 /* Pods-HikingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -543,6 +672,7 @@
 		};
 		79FAA84D2552AD2100C0F4BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C6D580A41AE29411881E1C4 /* Pods-Hiking-HikingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -563,6 +693,7 @@
 		};
 		79FAA84E2552AD2100C0F4BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF1CF85D0AF170A7815AD7A6 /* Pods-Hiking-HikingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

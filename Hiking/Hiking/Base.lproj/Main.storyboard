@@ -8,22 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Community-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="E1_CommunityViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Community" image="person.2.fill" catalog="system" selectedImage="person.2.fill" id="VKO-ey-csb"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1203" y="-414"/>
-        </scene>
         <!--Activity-->
         <scene sceneID="ySC-MR-xTv">
             <objects>
@@ -41,20 +25,102 @@
             <point key="canvasLocation" x="1203" y="279"/>
         </scene>
         <!--Hike-->
+        <scene sceneID="CX0-gf-L3x">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="N3f-p3-kqo" customClass="A_HomePageViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Hike" image="house.fill" catalog="system" selectedImage="house.fill" id="vqX-oJ-7dm"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0mw-la-Acz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1203" y="984"/>
+        </scene>
+        <!--Home Route Selection View Controller-->
+        <scene sceneID="aZX-oM-5dE">
+            <objects>
+                <viewController storyboardIdentifier="A2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ODE-vB-2sW" customClass="A2_HomeRouteSelectionViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kUx-of-VVv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvJ-iv-DNo">
+                                <rect key="frame" x="181" y="438" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cL7-Eb-gl0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Gp-i3-0rC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2874" y="984"/>
+        </scene>
+        <!--Home Route Draw View Controller-->
+        <scene sceneID="dYO-hd-ce5">
+            <objects>
+                <viewController storyboardIdentifier="A3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jTn-BZ-053" customClass="A3_HomeRouteDrawViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M25-8R-Wva">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJm-EI-HYr">
+                                <rect key="frame" x="181" y="438" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0l5-7Y-QBN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wvU-2K-laF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3664" y="984"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="IVE-Z8-pU8">
+            <objects>
+                <viewController storyboardIdentifier="A1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TcI-L1-HDT" customClass="A1_HomeViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sQZ-DV-bZC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIB-UI-PoI">
+                                <rect key="frame" x="182" y="438" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WOE-jF-7ub"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sXU-gy-XKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2067" y="984"/>
+        </scene>
+        <!--Community-->
         <scene sceneID="67x-KN-9DV">
             <objects>
-                <viewController id="XJg-Lh-U6d" customClass="A1_HomeViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XJg-Lh-U6d" customClass="E1_CommunityViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XxI-Xk-gAH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="687-tE-8ED"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Hike" image="house.fill" catalog="system" selectedImage="house.fill" id="HR7-Lx-E0i"/>
+                    <tabBarItem key="tabBarItem" title="Community" image="person.2.fill" catalog="system" selectedImage="person.2.fill" id="HR7-Lx-E0i"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTq-xa-1Tn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1203" y="984"/>
+            <point key="canvasLocation" x="1203" y="-419"/>
         </scene>
         <!--Achievement-->
         <scene sceneID="pFE-La-k4a">
@@ -94,13 +160,14 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tHM-FN-mQs" customClass="TabBarViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HwT-tC-Ecz">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="fa8-AT-2s5"/>
-                        <segue destination="0qy-TO-ZWm" kind="relationship" relationship="viewControllers" id="KYo-C7-EEK"/>
                         <segue destination="XJg-Lh-U6d" kind="relationship" relationship="viewControllers" id="cTa-xz-jpB"/>
+                        <segue destination="0qy-TO-ZWm" kind="relationship" relationship="viewControllers" id="KYo-C7-EEK"/>
+                        <segue destination="N3f-p3-kqo" kind="relationship" relationship="viewControllers" id="ATj-xm-lwi"/>
                         <segue destination="0lq-Ri-Fxj" kind="relationship" relationship="viewControllers" id="WX2-HA-siM"/>
                         <segue destination="H9p-gb-Z4G" kind="relationship" relationship="viewControllers" id="Ddo-eP-OWs"/>
                     </connections>
