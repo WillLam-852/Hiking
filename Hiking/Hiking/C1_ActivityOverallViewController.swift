@@ -1,5 +1,5 @@
 //
-//  C1_ActivityViewController.swift
+//  C1_ActivityOverallViewController.swift
 //  Hiking
 //
 //  Created by Will Lam on 4/11/2020.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class C1_ActivityViewController: UIViewController {
+class C1_ActivityOverallViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,5 +1,5 @@
 //
-//  D1_AchievementViewController.swift
+//  D1_AchievementMedalViewController.swift
 //  Hiking
 //
 //  Created by Will Lam on 4/11/2020.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class D1_AchievementViewController: UIViewController {
+class D1_AchievementMedalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
