@@ -11,7 +11,7 @@
         <!--Activity-->
         <scene sceneID="ySC-MR-xTv">
             <objects>
-                <viewController id="0qy-TO-ZWm" customClass="C1_ActivityViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="C1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0qy-TO-ZWm" customClass="C1_ActivityOverallViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="spT-u4-pJF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7yy-b7-Alp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1203" y="279"/>
+            <point key="canvasLocation" x="2067" y="278"/>
+        </scene>
+        <!--Activity Details View Controller-->
+        <scene sceneID="oyM-Qj-SDB">
+            <objects>
+                <viewController storyboardIdentifier="C2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7GK-Gg-1X9" customClass="C2_ActivityDetailsViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4q0-w6-vDe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="J4m-CN-lsx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Avz-qo-NKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2874" y="278"/>
+        </scene>
+        <!--Activity-->
+        <scene sceneID="jPZ-CK-YsS">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="zcZ-1r-LOQ" customClass="C_ActivityPageViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Activity" image="flag.fill" catalog="system" selectedImage="flag.fill" id="2bB-ob-ZJy"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hqm-en-Lcg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1203" y="278"/>
         </scene>
         <!--Hike-->
         <scene sceneID="CX0-gf-L3x">
@@ -42,16 +67,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvJ-iv-DNo">
-                                <rect key="frame" x="181" y="438" width="53" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SP-vE-tpe">
+                                <rect key="frame" x="351" y="23" width="30" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="dzN-1g-JuX"/>
+                                    <constraint firstAttribute="width" constant="30" id="ecJ-b3-AVN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" image="bookmark" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cL7-Eb-gl0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cL7-Eb-gl0" firstAttribute="trailing" secondItem="2SP-vE-tpe" secondAttribute="trailing" constant="33" id="KsI-Vf-tMP"/>
+                            <constraint firstItem="2SP-vE-tpe" firstAttribute="top" secondItem="kUx-of-VVv" secondAttribute="top" constant="23" id="ewR-Ia-fIF"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Gp-i3-0rC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -66,16 +97,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJm-EI-HYr">
-                                <rect key="frame" x="181" y="438" width="53" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUm-k4-PHv">
+                                <rect key="frame" x="351" y="23" width="30" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Jc0-wt-l9m"/>
+                                    <constraint firstAttribute="height" constant="33" id="oUc-VI-DgR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" image="bookmark" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0l5-7Y-QBN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lUm-k4-PHv" firstAttribute="top" secondItem="M25-8R-Wva" secondAttribute="top" constant="23" id="1LZ-Ve-qaa"/>
+                            <constraint firstItem="0l5-7Y-QBN" firstAttribute="trailing" secondItem="lUm-k4-PHv" secondAttribute="trailing" constant="33" id="Hx1-bP-2hk"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvU-2K-laF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -90,21 +127,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIB-UI-PoI">
-                                <rect key="frame" x="182" y="438" width="50" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeQ-T2-8Vs">
+                                <rect key="frame" x="351" y="23" width="30" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="6XP-iC-S7q"/>
+                                    <constraint firstAttribute="height" constant="33" id="Ht2-af-BkY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" image="bookmark" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WOE-jF-7ub"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MeQ-T2-8Vs" firstAttribute="top" secondItem="sQZ-DV-bZC" secondAttribute="top" constant="23" id="9zh-gz-AuV"/>
+                            <constraint firstItem="WOE-jF-7ub" firstAttribute="trailing" secondItem="MeQ-T2-8Vs" secondAttribute="trailing" constant="33" id="QvY-dL-dus"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXU-gy-XKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2067" y="984"/>
+            <point key="canvasLocation" x="2066.666666666667" y="983.70535714285711"/>
         </scene>
         <!--Community-->
         <scene sceneID="67x-KN-9DV">
@@ -123,9 +166,19 @@
             <point key="canvasLocation" x="1203" y="-419"/>
         </scene>
         <!--Achievement-->
+        <scene sceneID="i81-IP-DB4">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="d5O-HR-87H" customClass="D_AchivementPageViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Achievement" image="rosette" catalog="system" selectedImage="rosette" id="J1S-SY-tHO"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1FM-rs-bYU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1203" y="1673"/>
+        </scene>
+        <!--Achievement-->
         <scene sceneID="pFE-La-k4a">
             <objects>
-                <viewController id="0lq-Ri-Fxj" customClass="D1_AchievementViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="D1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0lq-Ri-Fxj" customClass="D1_AchievementMedalViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X8z-em-a9R">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,7 +189,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jWu-LJ-WzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1203" y="1671"/>
+            <point key="canvasLocation" x="2067" y="1673"/>
+        </scene>
+        <!--Achievement Challenge View Controller-->
+        <scene sceneID="jha-pr-6rS">
+            <objects>
+                <viewController storyboardIdentifier="D2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="clI-DN-a0X" customClass="D2_AchievementChallengeViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mCZ-dr-3zi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="meG-8q-bW8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0P-37-3sK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2874" y="1673"/>
+        </scene>
+        <!--Achievement Leaderboard View Controller-->
+        <scene sceneID="fFn-58-EqT">
+            <objects>
+                <viewController storyboardIdentifier="D3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RtH-6L-x5V" customClass="D3_AchievementLeaderboardViewController" customModule="Hiking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dQz-ba-fQe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cnq-cw-6ET"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5iw-fp-qsl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3664" y="1673"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="Z9a-az-qQM">
@@ -166,9 +249,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="XJg-Lh-U6d" kind="relationship" relationship="viewControllers" id="cTa-xz-jpB"/>
-                        <segue destination="0qy-TO-ZWm" kind="relationship" relationship="viewControllers" id="KYo-C7-EEK"/>
+                        <segue destination="zcZ-1r-LOQ" kind="relationship" relationship="viewControllers" id="kER-C9-ULy"/>
                         <segue destination="N3f-p3-kqo" kind="relationship" relationship="viewControllers" id="ATj-xm-lwi"/>
-                        <segue destination="0lq-Ri-Fxj" kind="relationship" relationship="viewControllers" id="WX2-HA-siM"/>
+                        <segue destination="d5O-HR-87H" kind="relationship" relationship="viewControllers" id="Q6x-aX-RI1"/>
                         <segue destination="H9p-gb-Z4G" kind="relationship" relationship="viewControllers" id="Ddo-eP-OWs"/>
                     </connections>
                 </tabBarController>
@@ -178,6 +261,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="flag.fill" catalog="system" width="128" height="121"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
