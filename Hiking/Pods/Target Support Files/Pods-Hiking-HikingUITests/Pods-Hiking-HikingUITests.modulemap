@@ -1,0 +1,6 @@
+framework module Pods_Hiking_HikingUITests {
+  umbrella header "Pods-Hiking-HikingUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
