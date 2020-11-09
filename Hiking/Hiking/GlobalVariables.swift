@@ -18,14 +18,14 @@ class Route {
     var bookmarked: Int
     var district: String
     
-    init(name n: String, distance d: Double, expectedTime et: Double, peak p: Double, difficulty diff: Int, bookmarked b: Int, dist: String) {
+    init(name n: String, distance d: Double, expectedTime et: Double, peak p: Double, difficulty diff: Int, bookmarked b: Int, district: String) {
         self.name = n
         self.distance = d
         self.expectedTime = et
         self.peak = p
         self.difficulty = diff
         self.bookmarked = b
-        self.district = dist
+        self.district = district
     }
 }
 
@@ -71,10 +71,15 @@ class User {
     }
 }
 
-var userList: [User] = []
-
 
 // User Information for Testing
 let userA: User = User(name: "April", gender: false, birthday: nil, phoneNumber: "11111111", email: "april@gmail.com", profilePicture: nil, hikeRecord: nil, friends: nil)
 let userB: User = User(name: "Bob", gender: true, birthday: nil, phoneNumber: "22222222", email: "bobbob@ymail.com", profilePicture: nil, hikeRecord: nil, friends: nil)
 let userC: User = User(name: "Cathy", gender: false, birthday: nil, phoneNumber: "33333333", email: "cathy@gmail.com", profilePicture: nil, hikeRecord: nil, friends: nil)
+var userList: [User] = [userA, userB, userC]
+
+// Route Information for Testing
+let routeA: Route = Route(name: "東涌至大澳", distance: 14.9, expectedTime: 5.0, peak: 345, difficulty: 3, bookmarked: 405, district: "離島區")
+let routeB: Route = Route(name: "獅子山、望夫石", distance: 10.5, expectedTime: 4.5, peak: 513, difficulty: 4, bookmarked: 1283, district: "沙田區")
+let routeC: Route = Route(name: "山頂至薄扶林", distance: 8.5, expectedTime: 2.5, peak: 210, difficulty: 1, bookmarked: 558, district: "中西區")
+var routeList: [Route] = [routeA, routeB, routeC]
