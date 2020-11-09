@@ -16,8 +16,8 @@ class TabBarViewController: UITabBarController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if firstLaunch == true {
-            firstLaunch = false
+        if firstLaunchApp == true {
+            firstLaunchApp = false
             self.selectedIndex = 2 // 3rd tab
         }
     }
