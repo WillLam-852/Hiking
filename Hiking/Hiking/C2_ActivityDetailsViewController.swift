@@ -9,6 +9,7 @@ import UIKit
 
 class C2_ActivityDetailsViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
