@@ -88,7 +88,6 @@ class A3_HomeRouteDrawViewController: UIViewController, CLLocationManagerDelegat
                     self.mapView.addAnnotation(annotation)
                     print("Problem with the data received from geocoder")
                 }
-//            places.append(["name":annotation.title,"latitude":"\(newCoordinates.latitude)","longitude":"\(newCoordinates.longitude)"])
             })
         }
     }
@@ -104,6 +103,26 @@ class A3_HomeRouteDrawViewController: UIViewController, CLLocationManagerDelegat
     }
     */
     
+    
+    private func routeMaking(sourceAddress: MKMapItem, destinationAddress: MKMapItem) {
+        let request = MKDirections.Request()
+        request.source = sourceAddress
+        request.destination = destinationAddress
+        request.requestsAlternateRoutes = false
+        
+        let directions = MKDirections(request: request)
+        directions.calculate() {
+            (response, error) in
+            if let res = response {
+                for r in res.routes {
+                    self.mapView.addOverlay(r.polyline, level: MKOverlayLevel.aboveRoads)
+                    for step in r.steps {
+                        print(step.instructions)
+                    }
+                }
+            }
+        }
+    }
     
     
     // MARK: - CLLocationManagerDelegate
@@ -154,6 +173,7 @@ class A3_HomeRouteDrawViewController: UIViewController, CLLocationManagerDelegat
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control.largeContentTitle == "selectLocation" {
             print("selectLocation")
+            
         } else if control.largeContentTitle == "diselectLocation" {
             print("diselectLocation")
         }
