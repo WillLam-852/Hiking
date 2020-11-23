@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		2247BF5C5614D9544C323464 /* Pods_Hiking_HikingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A0E7B9108FE7649163308E /* Pods_Hiking_HikingUITests.framework */; };
 		6E3580F1CAC6EF91344BC53A /* Pods_Hiking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E7A92491F499F906516854 /* Pods_Hiking.framework */; };
+		79043F5A256BB75A00029FE7 /* C2_ActivityDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79043F59256BB75A00029FE7 /* C2_ActivityDetailsTableViewCell.swift */; };
 		791DB6182564D6A70085E122 /* A2_2_HomeRouteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791DB6172564D6A70085E122 /* A2_2_HomeRouteDetailViewController.swift */; };
 		792E43B9255932C300D6A788 /* A2_RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E43B8255932C300D6A788 /* A2_RouteTableViewCell.swift */; };
 		792E43C1255BEE3C00D6A788 /* A3_LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E43C0255BEE3C00D6A788 /* A3_LocationSearchTableViewController.swift */; };
+		79A1C1B4256BBF8900392433 /* C2_2_ActivityDetailsHikeRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A1C1B3256BBF8900392433 /* C2_2_ActivityDetailsHikeRecordViewController.swift */; };
 		79E422B12553EED2001CE01B /* C_ActivityPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E422B02553EED2001CE01B /* C_ActivityPageViewController.swift */; };
 		79E422B62553EEF3001CE01B /* C2_ActivityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E422B52553EEF3001CE01B /* C2_ActivityDetailsViewController.swift */; };
 		79E422BE2553EFE9001CE01B /* D_AchivementPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E422BD2553EFE9001CE01B /* D_AchivementPageViewController.swift */; };
@@ -59,9 +61,11 @@
 		40E7A92491F499F906516854 /* Pods_Hiking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hiking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58D1B5F630A37CD287886084 /* Pods_HikingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HikingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C6D580A41AE29411881E1C4 /* Pods-Hiking-HikingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hiking-HikingUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hiking-HikingUITests/Pods-Hiking-HikingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		79043F59256BB75A00029FE7 /* C2_ActivityDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C2_ActivityDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		791DB6172564D6A70085E122 /* A2_2_HomeRouteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A2_2_HomeRouteDetailViewController.swift; sourceTree = "<group>"; };
 		792E43B8255932C300D6A788 /* A2_RouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A2_RouteTableViewCell.swift; sourceTree = "<group>"; };
 		792E43C0255BEE3C00D6A788 /* A3_LocationSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A3_LocationSearchTableViewController.swift; sourceTree = "<group>"; };
+		79A1C1B3256BBF8900392433 /* C2_2_ActivityDetailsHikeRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C2_2_ActivityDetailsHikeRecordViewController.swift; sourceTree = "<group>"; };
 		79E422B02553EED2001CE01B /* C_ActivityPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_ActivityPageViewController.swift; sourceTree = "<group>"; };
 		79E422B52553EEF3001CE01B /* C2_ActivityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C2_ActivityDetailsViewController.swift; sourceTree = "<group>"; };
 		79E422BD2553EFE9001CE01B /* D_AchivementPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_AchivementPageViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				79E422B02553EED2001CE01B /* C_ActivityPageViewController.swift */,
 				79FAA8682552AF8A00C0F4BE /* C1_ActivityOverallViewController.swift */,
 				79E422B52553EEF3001CE01B /* C2_ActivityDetailsViewController.swift */,
+				79043F59256BB75A00029FE7 /* C2_ActivityDetailsTableViewCell.swift */,
+				79A1C1B3256BBF8900392433 /* C2_2_ActivityDetailsHikeRecordViewController.swift */,
 				79E422BD2553EFE9001CE01B /* D_AchivementPageViewController.swift */,
 				79FAA86D2552AF9A00C0F4BE /* D1_AchievementMedalViewController.swift */,
 				79E422C22553F005001CE01B /* D2_AchievementChallengeViewController.swift */,
@@ -426,11 +432,13 @@
 			files = (
 				792E43C1255BEE3C00D6A788 /* A3_LocationSearchTableViewController.swift in Sources */,
 				79FAA8842552B00000C0F4BE /* F1_SettingViewController.swift in Sources */,
+				79A1C1B4256BBF8900392433 /* C2_2_ActivityDetailsHikeRecordViewController.swift in Sources */,
 				79FAA8272552AD1E00C0F4BE /* Hiking.xcdatamodeld in Sources */,
 				79E422BE2553EFE9001CE01B /* D_AchivementPageViewController.swift in Sources */,
 				79E422B62553EEF3001CE01B /* C2_ActivityDetailsViewController.swift in Sources */,
 				791DB6182564D6A70085E122 /* A2_2_HomeRouteDetailViewController.swift in Sources */,
 				79FAA81D2552AD1E00C0F4BE /* AppDelegate.swift in Sources */,
+				79043F5A256BB75A00029FE7 /* C2_ActivityDetailsTableViewCell.swift in Sources */,
 				79E422CB2553F018001CE01B /* D3_AchievementLeaderboardViewController.swift in Sources */,
 				79FAA8A22553B5CE00C0F4BE /* A2_HomeRouteSelectionViewController.swift in Sources */,
 				79E422B12553EED2001CE01B /* C_ActivityPageViewController.swift in Sources */,

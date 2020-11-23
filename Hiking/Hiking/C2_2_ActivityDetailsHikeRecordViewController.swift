@@ -1,48 +1,44 @@
 //
-//  A2_2_HomeRouteDetailViewController.swift
+//  C2_2_ActivityDetailsHikeRecordViewController.swift
 //  Hiking
 //
-//  Created by Will Lam on 18/11/2020.
+//  Created by Will Lam on 23/11/2020.
 //
 
 import UIKit
 import MapKit
-import CoreLocation
 
-class A2_2_HomeRouteDetailViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
-    
-    var currentRoute: Route?
+class C2_2_ActivityDetailsHikeRecordViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var descriptionTextField: UITextView!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var expectedTimeLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var peakLabel: UILabel!
-    @IBOutlet weak var difficultyLabel: UILabel!
-    @IBOutlet weak var districtLabel: UILabel!
+    @IBOutlet weak var paceLabel: UILabel!
+    @IBOutlet weak var bpmLabel: UILabel!
+    
+    var currentHikeRecord: HikeRecord? = nil
+    var currentRoute: Route? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        if let r = currentRoute {
-            descriptionTextField.text = r.description
-            distanceLabel.text = String(r.distance) + " km"
-            expectedTimeLabel.text = String(r.expectedTime) + " hour"
-            peakLabel.text = String(r.peak) + " m"
-            difficultyLabel.text = String(r.difficulty) + " star(s)"
-            districtLabel.text = r.district.joined(separator: ", ")
+        if let hr = currentHikeRecord {
+            let dF = DateFormatter()
+            dF.dateFormat = "d MMM yyyy"
+            dateLabel.text = dF.string(from: hr.recordedDate)
+            distanceLabel.text = String(hr.recordedDistance) + " km"
+            timeLabel.text = String(hr.recordedTime) + " hour"
+            peakLabel.text = String(hr.recordedPeak) + " m"
+            paceLabel.text = String(hr.recordedAveragePace) + " km/hr"
+            bpmLabel.text = String(hr.recordedAverageBPM)
+            currentRoute = hr.routeReference
         }
         
         mapView.delegate = self
         self.showMapRoute()
         self.showAnnotations()
-    }
-    
-    // MARK: - Actions
-    
-    @IBAction func pressedStart(_ sender: Any) {
-        
     }
     
     
@@ -91,6 +87,7 @@ class A2_2_HomeRouteDetailViewController: UIViewController, CLLocationManagerDel
         }
     }
     
+    
     private func showAnnotations() {
         self.mapView.removeAnnotations(self.mapView.annotations)
         if let r = currentRoute {
@@ -104,42 +101,6 @@ class A2_2_HomeRouteDetailViewController: UIViewController, CLLocationManagerDel
             annotation_EndPoint.title = "End Point"
             
             self.mapView.addAnnotations([annotation_StartPoint, annotation_EndPoint])
-            
-            let request_toilet = MKLocalSearch.Request()
-            request_toilet.naturalLanguageQuery = "Toilet"
-            request_toilet.region = self.mapView.region
-            let search_toilet = MKLocalSearch(request: request_toilet)
-            search_toilet.start() {
-                (response, error) in
-                if error != nil {
-                    print("Error in search: \(error!.localizedDescription)")
-                } else if response!.mapItems.count > 0 {
-                    for item in response!.mapItems {
-                        let annotation_Toilet = MKPointAnnotation()
-                        annotation_Toilet.coordinate = item.placemark.coordinate
-                        annotation_Toilet.title = "Toilet"
-//                        self.mapView.addAnnotation(annotation_Toilet)
-                    }
-                }
-            }
-            
-            let request_campsite = MKLocalSearch.Request()
-            request_campsite.naturalLanguageQuery = "Campsite"
-            request_campsite.region = self.mapView.region
-            let search_campsite = MKLocalSearch(request: request_campsite)
-            search_campsite.start() {
-                (response, error) in
-                if error != nil {
-                    print("Error in search: \(error!.localizedDescription)")
-                } else if response!.mapItems.count > 0 {
-                    for item in response!.mapItems {
-                        let annotation_Campsite = MKPointAnnotation()
-                        annotation_Campsite.coordinate = item.placemark.coordinate
-                        annotation_Campsite.title = "Campsite"
-//                        self.mapView.addAnnotation(annotation_Campsite)
-                    }
-                }
-            }
         }
     }
     
@@ -153,27 +114,12 @@ class A2_2_HomeRouteDetailViewController: UIViewController, CLLocationManagerDel
         return renderer
     }
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let identifier = "myMarker"
-        var view: MKMarkerAnnotationView
-        
-        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView {
-            dequeuedView.annotation = annotation
-            view = dequeuedView
-        } else {
-            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            if view.annotation?.title == "Start Point" {
-                view.glyphImage = UIImage(systemName: "play.fill")
-            } else if view.annotation?.title == "End Point" {
-                view.glyphImage = UIImage(systemName: "stop.fill")
-            } else if view.annotation?.title == "Toilet" {
-                view.glyphImage = UIImage(named: "Toilet")
-            } else if view.annotation?.title == "Campsite" {
-                view.glyphImage = UIImage(named: "Campsite")
-            }
-        }
-        return view
+    
+    // MARK: - Actions
+    
+    @IBAction func pressedEditButton(_ sender: UIButton) {
     }
+    
     
     /*
     // MARK: - Navigation
