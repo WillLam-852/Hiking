@@ -264,10 +264,10 @@ class A3_HomeRouteDrawViewController: UIViewController, CLLocationManagerDelegat
             // MARK: - TODO: Calculate Distance, Expected Time, Peak...
             var midwayPoint: [MapPoint] = []
             for mP in self.annotation_MidwayPoint {
-                midwayPoint.append(MapPoint(name: "Midway Point \(String(mP.1!))", type: .selfDefined, coordinate: mP.0.coordinate, orderNumber: mP.1))
+                midwayPoint.append(MapPoint(name: "Midway Point \(String(mP.1!))", type: .selfDefined, coordinate: mP.0.coordinate, orderNumber: mP.1!))
             }
             midwayPoint.sort() {
-                $0.orderNumber! < $1.orderNumber!
+                $0.orderNumber < $1.orderNumber
             }
             self.currentRoute = Route(name: "Unnamed", description: "", distance: 0, expectedTime: 0, peak: 0, difficulty: 1, bookmarked: 0, district: [], startPoint: annotation_StartPoint!.coordinate, endPoint: annotation_EndPoint!.coordinate, midwayPoints: midwayPoint)
             self.showMapRoute()
