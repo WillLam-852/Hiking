@@ -6,6 +6,8 @@ target 'Hiking' do
   use_frameworks!
 
   # Pods for Hiking
+  pod 'Charts'
+  pod 'TinyConstraints'
 
   target 'HikingTests' do
     inherit! :search_paths

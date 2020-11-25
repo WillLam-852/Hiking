@@ -11,7 +11,6 @@ import MapKit
 
 class A1_HomeViewController: UIViewController, CLLocationManagerDelegate {
 
-    @IBOutlet weak var bookmarkButton: UIButton!
     @IBOutlet weak var weather_TextView: UITextView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var goal_Label: UILabel!
@@ -23,7 +22,9 @@ class A1_HomeViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "HIKE"
+        navigationController?.title = "Hike"
+        
         mapView.showsUserLocation = true
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -48,14 +49,16 @@ class A1_HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     
     // MARK: - Actions
-    
-    @IBAction func pressedBookmarkButton(_ sender: UIButton) {
-    }
-    
+
     @IBAction func pressedStartButton(_ sender: UIButton) {
         mapView.setRegion(userRegion, animated: true)
     }
     
+    @IBAction func pressedRouteSelectionButton(_ sender: Any) {
+    }
+    
+    @IBAction func pressedRouteDrawButton(_ sender: UIButton) {
+    }
     
     // MARK: - CLLocationManagerDelegate
     

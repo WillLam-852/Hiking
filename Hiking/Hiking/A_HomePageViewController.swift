@@ -9,6 +9,10 @@ import UIKit
 
 class A_HomePageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
+    var routesDocument: RoutesDocument?
+    var routesDocumentURL: URL?
+    var hikeRecordsDocument: HikeRecordsDocument?
+    var hikeRecordsDocumentURL: URL?
     
     // Identify the Pages for Swiping Action
     fileprivate lazy var pages: [UIViewController] = {
@@ -28,7 +32,10 @@ class A_HomePageViewController: UIPageViewController, UIPageViewControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "HIKE"
+        navigationController?.title = "Hike"
+        self.loadRoutesDoucment()
+        self.loadHikeRecordsDocument()
         self.delegate = self
         self.dataSource = self
         
@@ -45,6 +52,7 @@ class A_HomePageViewController: UIPageViewController, UIPageViewControllerDelega
         let previousIndex = viewControllerIndex - 1 // Get the previous page index
         guard previousIndex >= 0 else { return pages.last } // If the current page index is the first one, go to the last page index
         guard pages.count > previousIndex else { return nil } // If the previous page index is larger than the total number of pages, there is an error
+        self.saveRoutesDocument()
         return pages[previousIndex]
     }
     
@@ -53,18 +61,86 @@ class A_HomePageViewController: UIPageViewController, UIPageViewControllerDelega
         let nextIndex = viewControllerIndex + 1 // Get the next page index
         guard nextIndex < pages.count else { return pages.first } // If the current page index is the last one, go to the first page index
         guard pages.count > nextIndex else { return nil } // If the next page index is larger than the total number of pages, there is an error
+        self.saveRoutesDocument()
         return pages[nextIndex]
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - Private Functions
+    
+    private func loadRoutesDoucment() {
+        let fileManager = FileManager.default
+        let dirPaths = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
+        routesDocumentURL = dirPaths[0].appendingPathComponent("routes.txt")
+        routesDocument = RoutesDocument(fileURL: routesDocumentURL!)
+        
+        if fileManager.fileExists(atPath: routesDocumentURL!.path){
+            routesDocument!.open(completionHandler: {(success:Bool) in
+                if success{
+                    print("Load Routes Document Success")
+                    if let rD = self.routesDocument {
+                        routeList = rD.routes
+                    }
+                } else {
+                    print("Load Default Route List")
+                    routeList = defaultRouteList
+                }
+            })
+        } else {
+            routesDocument!.save(to: routesDocumentURL!, for: .forCreating, completionHandler: {(success:Bool) in
+                if !success{
+                    print("Failed to create Routes Document")
+                }else{
+                    print("Routes Document created")
+                }
+            })
+        }
     }
-    */
+
+    
+    private func saveRoutesDocument() {
+        let fileManager = FileManager.default
+        let dirPaths = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
+        let routesDocumentURL = dirPaths[0].appendingPathComponent("routes.txt")
+        let routesDocument = RoutesDocument(fileURL: routesDocumentURL)
+        routesDocument.routes = routeList
+        routesDocument.save(to: routesDocumentURL, for: .forOverwriting, completionHandler: {(success:Bool) in
+            if !success{
+                print("Failed to update Route Document")
+            }else{
+                print("Route Document updated")
+            }
+        })
+    }
+    
+    
+    private func loadHikeRecordsDocument() {
+        let fileManager = FileManager.default
+        let dirPaths = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
+        hikeRecordsDocumentURL = dirPaths[0].appendingPathComponent("hikeRecords.txt")
+        hikeRecordsDocument = HikeRecordsDocument(fileURL: hikeRecordsDocumentURL!)
+        
+        if fileManager.fileExists(atPath: hikeRecordsDocumentURL!.path){
+            hikeRecordsDocument!.open(completionHandler: {(success:Bool) in
+                if success {
+                    print("Load Hike Records Document Success")
+                    if let hRD = self.hikeRecordsDocument {
+                        currentUser.userHikeRecord = hRD.hikeRecords
+                    }
+                } else {
+                    print("Load Default Hike Record List")
+                    currentUser.userHikeRecord = dafaultHikeRecords
+                }
+            })
+        } else {
+            hikeRecordsDocument!.save(to: hikeRecordsDocumentURL!, for: .forCreating, completionHandler: {(success:Bool) in
+                if !success{
+                    print("Failed to create Hike Records Document")
+                }else{
+                    print("Hike Records Document created")
+                }
+            })
+        }
+    }
 
 }

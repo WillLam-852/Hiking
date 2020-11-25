@@ -28,7 +28,8 @@ class D_AchivementPageViewController: UIPageViewController, UIPageViewController
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "ACHIEVEMENT"
+        navigationController?.title = "Achievement"
         self.delegate = self
         self.dataSource = self
         

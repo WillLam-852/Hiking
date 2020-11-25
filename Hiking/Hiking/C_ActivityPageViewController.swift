@@ -27,7 +27,8 @@ class C_ActivityPageViewController: UIPageViewController, UIPageViewControllerDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "ACTIVITY"
+        navigationController?.title = "Activity"
         self.delegate = self
         self.dataSource = self
         
@@ -44,6 +45,7 @@ class C_ActivityPageViewController: UIPageViewController, UIPageViewControllerDe
         let previousIndex = viewControllerIndex - 1 // Get the previous page index
         guard previousIndex >= 0 else { return pages.last } // If the current page index is the first one, go to the last page index
         guard pages.count > previousIndex else { return nil } // If the previous page index is larger than the total number of pages, there is an error
+        self.saveHikeRecordsDocument()
         return pages[previousIndex]
     }
     
@@ -52,18 +54,27 @@ class C_ActivityPageViewController: UIPageViewController, UIPageViewControllerDe
         let nextIndex = viewControllerIndex + 1 // Get the next page index
         guard nextIndex < pages.count else { return pages.first } // If the current page index is the last one, go to the first page index
         guard pages.count > nextIndex else { return nil } // If the next page index is larger than the total number of pages, there is an error
+        self.saveHikeRecordsDocument()
         return pages[nextIndex]
+        
     }
     
+    
+    // MARK: - Private Functions
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func saveHikeRecordsDocument() {
+        let fileManager = FileManager.default
+        let dirPaths = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
+        let hikeRecordsDocumentURL = dirPaths[0].appendingPathComponent("hikeRecords.txt")
+        let hikeRecordsDocument = HikeRecordsDocument(fileURL: hikeRecordsDocumentURL)
+        hikeRecordsDocument.hikeRecords = currentUser.userHikeRecord
+        hikeRecordsDocument.save(to: hikeRecordsDocumentURL, for: .forOverwriting, completionHandler: {(success:Bool) in
+            if !success{
+                print("Failed to update Hike Records Document")
+            }else{
+                print("Hike Records Document updated")
+            }
+        })
     }
-    */
 
 }

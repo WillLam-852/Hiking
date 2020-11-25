@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,14 @@
 		791DB6182564D6A70085E122 /* A2_2_HomeRouteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791DB6172564D6A70085E122 /* A2_2_HomeRouteDetailViewController.swift */; };
 		792E43B9255932C300D6A788 /* A2_RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E43B8255932C300D6A788 /* A2_RouteTableViewCell.swift */; };
 		792E43C1255BEE3C00D6A788 /* A3_LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E43C0255BEE3C00D6A788 /* A3_LocationSearchTableViewController.swift */; };
+		79859C24256BCA7E006A696D /* H1_HikeOnProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79859C23256BCA7E006A696D /* H1_HikeOnProgressViewController.swift */; };
+		79859C29256BCA8C006A696D /* H2_HikePauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79859C28256BCA8C006A696D /* H2_HikePauseViewController.swift */; };
+		79859C31256BCA9A006A696D /* H3_HikeFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79859C30256BCA9A006A696D /* H3_HikeFinishViewController.swift */; };
+		79859C86256CFDD8006A696D /* RecordDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79859C85256CFDD8006A696D /* RecordDocument.swift */; };
 		79A1C1B4256BBF8900392433 /* C2_2_ActivityDetailsHikeRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A1C1B3256BBF8900392433 /* C2_2_ActivityDetailsHikeRecordViewController.swift */; };
+		79DCFBD3256E39DD00469596 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DCFBD2256E39DD00469596 /* HealthKit.framework */; };
+		79DCFBDD256E413400469596 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DCFBDC256E413400469596 /* LocalNotificationManager.swift */; };
+		79DCFBF7256E4F4A00469596 /* Voice Guide of Bride's Pool.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79DCFBF6256E4F4A00469596 /* Voice Guide of Bride's Pool.mp3 */; };
 		79E422B12553EED2001CE01B /* C_ActivityPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E422B02553EED2001CE01B /* C_ActivityPageViewController.swift */; };
 		79E422B62553EEF3001CE01B /* C2_ActivityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E422B52553EEF3001CE01B /* C2_ActivityDetailsViewController.swift */; };
 		79E422BE2553EFE9001CE01B /* D_AchivementPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E422BD2553EFE9001CE01B /* D_AchivementPageViewController.swift */; };
@@ -65,7 +72,15 @@
 		791DB6172564D6A70085E122 /* A2_2_HomeRouteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A2_2_HomeRouteDetailViewController.swift; sourceTree = "<group>"; };
 		792E43B8255932C300D6A788 /* A2_RouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A2_RouteTableViewCell.swift; sourceTree = "<group>"; };
 		792E43C0255BEE3C00D6A788 /* A3_LocationSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A3_LocationSearchTableViewController.swift; sourceTree = "<group>"; };
+		79859C23256BCA7E006A696D /* H1_HikeOnProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H1_HikeOnProgressViewController.swift; sourceTree = "<group>"; };
+		79859C28256BCA8C006A696D /* H2_HikePauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H2_HikePauseViewController.swift; sourceTree = "<group>"; };
+		79859C30256BCA9A006A696D /* H3_HikeFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H3_HikeFinishViewController.swift; sourceTree = "<group>"; };
+		79859C85256CFDD8006A696D /* RecordDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDocument.swift; sourceTree = "<group>"; };
 		79A1C1B3256BBF8900392433 /* C2_2_ActivityDetailsHikeRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C2_2_ActivityDetailsHikeRecordViewController.swift; sourceTree = "<group>"; };
+		79DCFBD2256E39DD00469596 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		79DCFBDC256E413400469596 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		79DCFBEA256E4C4000469596 /* Hiking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hiking.entitlements; sourceTree = "<group>"; };
+		79DCFBF6256E4F4A00469596 /* Voice Guide of Bride's Pool.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Voice Guide of Bride's Pool.mp3"; sourceTree = "<group>"; };
 		79E422B02553EED2001CE01B /* C_ActivityPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_ActivityPageViewController.swift; sourceTree = "<group>"; };
 		79E422B52553EEF3001CE01B /* C2_ActivityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C2_ActivityDetailsViewController.swift; sourceTree = "<group>"; };
 		79E422BD2553EFE9001CE01B /* D_AchivementPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_AchivementPageViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DCFBD3256E39DD00469596 /* HealthKit.framework in Frameworks */,
 				6E3580F1CAC6EF91344BC53A /* Pods_Hiking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +150,7 @@
 		37A2BF114ACFFD386A1FB177 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79DCFBD2256E39DD00469596 /* HealthKit.framework */,
 				40E7A92491F499F906516854 /* Pods_Hiking.framework */,
 				C3A0E7B9108FE7649163308E /* Pods_Hiking_HikingUITests.framework */,
 				58D1B5F630A37CD287886084 /* Pods_HikingTests.framework */,
@@ -166,7 +183,10 @@
 		79FAA81B2552AD1E00C0F4BE /* Hiking */ = {
 			isa = PBXGroup;
 			children = (
+				79DCFBEA256E4C4000469596 /* Hiking.entitlements */,
 				79FAA8552552AEB200C0F4BE /* GlobalVariables.swift */,
+				79859C85256CFDD8006A696D /* RecordDocument.swift */,
+				79DCFBDC256E413400469596 /* LocalNotificationManager.swift */,
 				79FAA8882552B30F00C0F4BE /* TabBarViewController.swift */,
 				79FAA8932553AFDA00C0F4BE /* A_HomePageViewController.swift */,
 				79FAA8632552AF6E00C0F4BE /* A1_HomeViewController.swift */,
@@ -186,7 +206,11 @@
 				79E422CA2553F018001CE01B /* D3_AchievementLeaderboardViewController.swift */,
 				79FAA8722552AFAF00C0F4BE /* E1_CommunityViewController.swift */,
 				79FAA8832552B00000C0F4BE /* F1_SettingViewController.swift */,
+				79859C23256BCA7E006A696D /* H1_HikeOnProgressViewController.swift */,
+				79859C28256BCA8C006A696D /* H2_HikePauseViewController.swift */,
+				79859C30256BCA9A006A696D /* H3_HikeFinishViewController.swift */,
 				79FAA8282552AD2100C0F4BE /* Assets.xcassets */,
+				79DCFBF6256E4F4A00469596 /* Voice Guide of Bride's Pool.mp3 */,
 				79FAA8222552AD1E00C0F4BE /* Main.storyboard */,
 				79FAA82A2552AD2100C0F4BE /* LaunchScreen.storyboard */,
 				79FAA82D2552AD2100C0F4BE /* Info.plist */,
@@ -239,6 +263,7 @@
 				79FAA8152552AD1E00C0F4BE /* Sources */,
 				79FAA8162552AD1E00C0F4BE /* Frameworks */,
 				79FAA8172552AD1E00C0F4BE /* Resources */,
+				9A0F47BD8FEE883777F1D001 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,6 +301,7 @@
 				79FAA8392552AD2100C0F4BE /* Sources */,
 				79FAA83A2552AD2100C0F4BE /* Frameworks */,
 				79FAA83B2552AD2100C0F4BE /* Resources */,
+				27A10B2955E2887B3D9018A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -334,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DCFBF7256E4F4A00469596 /* Voice Guide of Bride's Pool.mp3 in Resources */,
 				79FAA82C2552AD2100C0F4BE /* LaunchScreen.storyboard in Resources */,
 				79FAA8292552AD2100C0F4BE /* Assets.xcassets in Resources */,
 				79FAA8242552AD1E00C0F4BE /* Main.storyboard in Resources */,
@@ -377,6 +404,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27A10B2955E2887B3D9018A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hiking-HikingUITests/Pods-Hiking-HikingUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hiking-HikingUITests/Pods-Hiking-HikingUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hiking-HikingUITests/Pods-Hiking-HikingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A0F47BD8FEE883777F1D001 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hiking/Pods-Hiking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hiking/Pods-Hiking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hiking/Pods-Hiking-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE66DBA731D3DA69374FD107 /* [CP] Check Pods Manifest.lock */ = {
@@ -432,6 +493,7 @@
 			files = (
 				792E43C1255BEE3C00D6A788 /* A3_LocationSearchTableViewController.swift in Sources */,
 				79FAA8842552B00000C0F4BE /* F1_SettingViewController.swift in Sources */,
+				79859C24256BCA7E006A696D /* H1_HikeOnProgressViewController.swift in Sources */,
 				79A1C1B4256BBF8900392433 /* C2_2_ActivityDetailsHikeRecordViewController.swift in Sources */,
 				79FAA8272552AD1E00C0F4BE /* Hiking.xcdatamodeld in Sources */,
 				79E422BE2553EFE9001CE01B /* D_AchivementPageViewController.swift in Sources */,
@@ -443,6 +505,7 @@
 				79FAA8A22553B5CE00C0F4BE /* A2_HomeRouteSelectionViewController.swift in Sources */,
 				79E422B12553EED2001CE01B /* C_ActivityPageViewController.swift in Sources */,
 				79FAA8692552AF8A00C0F4BE /* C1_ActivityOverallViewController.swift in Sources */,
+				79DCFBDD256E413400469596 /* LocalNotificationManager.swift in Sources */,
 				792E43B9255932C300D6A788 /* A2_RouteTableViewCell.swift in Sources */,
 				79FAA8642552AF6E00C0F4BE /* A1_HomeViewController.swift in Sources */,
 				79E422C32553F005001CE01B /* D2_AchievementChallengeViewController.swift in Sources */,
@@ -452,7 +515,10 @@
 				79FAA8892552B30F00C0F4BE /* TabBarViewController.swift in Sources */,
 				79FAA8942553AFDA00C0F4BE /* A_HomePageViewController.swift in Sources */,
 				79FAA8A72553B5E600C0F4BE /* A3_HomeRouteDrawViewController.swift in Sources */,
+				79859C29256BCA8C006A696D /* H2_HikePauseViewController.swift in Sources */,
 				79FAA8562552AEB200C0F4BE /* GlobalVariables.swift in Sources */,
+				79859C86256CFDD8006A696D /* RecordDocument.swift in Sources */,
+				79859C31256BCA9A006A696D /* H3_HikeFinishViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,9 +695,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Hiking/Hiking.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3N6692BLL;
 				INFOPLIST_FILE = Hiking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -649,9 +717,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Hiking/Hiking.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3N6692BLL;
 				INFOPLIST_FILE = Hiking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

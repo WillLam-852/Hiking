@@ -49,6 +49,7 @@ class C2_ActivityDetailsViewController: UIViewController, UITableViewDelegate, U
     // MARK: - Actions
     
     @IBAction func pressedFilterButton(_ sender: UIButton) {
+        self.hikeRecordsTableView.reloadData()
     }
     
     @IBAction func pressedMapButton(_ sender: UIButton) {
