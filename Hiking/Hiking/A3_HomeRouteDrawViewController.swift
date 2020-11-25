@@ -17,6 +17,7 @@ protocol HandleMapSearch {
 
 class A3_HomeRouteDrawViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
+    @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
     
     var currentPlacemark: CLPlacemark?
@@ -32,6 +33,10 @@ class A3_HomeRouteDrawViewController: UIViewController, CLLocationManagerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        doneButton.isEnabled = false
+        title = "HIKE"
+        navigationController?.title = "Hike"
+        
         // Do any additional setup after loading the view.
         mapView.showsUserLocation = true
         mapView.delegate = self
@@ -271,6 +276,9 @@ class A3_HomeRouteDrawViewController: UIViewController, CLLocationManagerDelegat
             }
             self.currentRoute = Route(name: "Unnamed", description: "", distance: 0, expectedTime: 0, peak: 0, difficulty: 1, bookmarked: 0, district: [], startPoint: annotation_StartPoint!.coordinate, endPoint: annotation_EndPoint!.coordinate, midwayPoints: midwayPoint)
             self.showMapRoute()
+            self.doneButton.isEnabled = true
+        } else {
+            self.doneButton.isEnabled = false
         }
     }
     
@@ -325,6 +333,26 @@ class A3_HomeRouteDrawViewController: UIViewController, CLLocationManagerDelegat
         self.mapView.removeAnnotations(self.mapView.annotations)
         self.mapView.removeOverlays(self.mapView.overlays)
         self.currentRoute = nil
+    }
+    
+    @IBAction func pressedDoneButton(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Add New Route", message: nil, preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "Confirm", style: .default, handler: {
+            [weak alert] _ in
+                guard let alert = alert, let textField = alert.textFields?.first else { return }
+            self.currentRoute?.name = textField.text ?? "Unnamed"
+            routeList.append(self.currentRoute!)
+            
+            
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(confirmAction)
+        alert.addAction(cancelAction)
+        alert.addTextField() {
+            textField in
+            textField.placeholder = "Route Name"
+        }
+        self.present(alert, animated: true)
     }
 }
 

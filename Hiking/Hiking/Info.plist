@@ -24,6 +24,10 @@
 	<string>Always mode is preferable to this app</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location information is required for this app</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Reading data just for a test.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Writing data just for a test.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

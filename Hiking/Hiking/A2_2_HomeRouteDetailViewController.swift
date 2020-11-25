@@ -8,11 +8,14 @@
 import UIKit
 import MapKit
 import CoreLocation
+import AVFoundation
 
 class A2_2_HomeRouteDetailViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     var currentRoute: Route?
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var containView: UIView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var descriptionTextField: UITextView!
     @IBOutlet weak var distanceLabel: UILabel!
@@ -20,12 +23,29 @@ class A2_2_HomeRouteDetailViewController: UIViewController, CLLocationManagerDel
     @IBOutlet weak var peakLabel: UILabel!
     @IBOutlet weak var difficultyLabel: UILabel!
     @IBOutlet weak var districtLabel: UILabel!
+    @IBOutlet weak var audioPlayButton: UIButton!
+    @IBOutlet weak var audioPauseButton: UIButton!
+    
+    var audioPlayer = AVAudioPlayer()
+    
+    @IBAction func pressedAudioPlayButton(_ sender: UIButton) {
+        audioPlayer.play()
+        audioPlayButton.isHidden = true
+        audioPauseButton.isHidden = false
+    }
+    
+    @IBAction func pressedAudioPauseButton(_ sender: UIButton) {
+        audioPlayer.pause()
+        audioPlayButton.isHidden = false
+        audioPauseButton.isHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         if let r = currentRoute {
+            title = r.name
             descriptionTextField.text = r.description
             distanceLabel.text = String(r.distance) + " km"
             expectedTimeLabel.text = String(r.expectedTime) + " hour"
@@ -37,6 +57,23 @@ class A2_2_HomeRouteDetailViewController: UIViewController, CLLocationManagerDel
         mapView.delegate = self
         self.showMapRoute()
         self.showAnnotations()
+        
+        audioPlayButton.isHidden = false
+        audioPauseButton.isHidden = true
+        
+        let sound = Bundle.main.path(forResource: "Voice Guide of Bride's Pool", ofType: "mp3")
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+        }
+        catch{
+            print(error)
+        }
+        
+        var frame = self.descriptionTextField.frame
+        frame.size.height = self.descriptionTextField.contentSize.height
+        self.descriptionTextField.frame = frame
+        
+        self.scrollView.isDirectionalLockEnabled = true
     }
     
     // MARK: - Actions

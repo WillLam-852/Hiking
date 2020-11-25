@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: d7432a10b99ffb124f58148287961df6a1ad4f53
+PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - TinyConstraints (4.0.1)
+
+DEPENDENCIES:
+  - Charts
+  - TinyConstraints
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - TinyConstraints
+
+SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
+
+PODFILE CHECKSUM: 891fc7e5ca94684dfc82be704ac3ebfebcde863b
 
 COCOAPODS: 1.10.0

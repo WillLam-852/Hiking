@@ -10,11 +10,30 @@ import MapKit
 
 var firstLaunchApp = true      // Boolean value for first launching the app
 
-enum MapLocationType {
+enum MapLocationType: String, Codable {
     case toilet, campsite, viewingPoint, busStop, pier, beach, sittingOutArea, pavilion, selfDefined
 }
 
-class MapPoint {
+extension CLLocationCoordinate2D: Codable {
+    enum CodingKeys: CodingKey {
+        case longitude, latitude
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(longitude, forKey: .longitude)
+        try container.encode(latitude, forKey: .latitude)
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.init()
+        longitude = try container.decode(CLLocationDegrees.self, forKey: .longitude)
+        latitude = try container.decode(CLLocationDegrees.self, forKey: .latitude)
+    }
+}
+
+class MapPoint: Codable {
     var name: String
     var type: MapLocationType
     var coordinate: CLLocationCoordinate2D
@@ -28,7 +47,7 @@ class MapPoint {
     }
 }
 
-class Route {
+class Route: Codable {
     var name: String
     var description: String
     var distance: Double
@@ -56,7 +75,7 @@ class Route {
     }
 }
 
-class HikeRecord {
+class HikeRecord: Codable {
     var routeReference: Route
     var recordedRouteName: String
     var recordedDistance: Double
@@ -78,13 +97,14 @@ class HikeRecord {
     }
 }
 
-class User {
+
+class User: Codable {
     var userName: String
     var userGender: Bool    // True for Male, False for Female
     var userBirthday: Date?
     var userPhoneNumber: String?
     var userEmail: String?
-    var userProfilePicture: UIImage?
+//    var userProfilePicture: UIImage?
     var userHikeRecord: [HikeRecord]
     var userFriends: User?
     
@@ -94,7 +114,7 @@ class User {
         self.userBirthday = b
         self.userPhoneNumber = p
         self.userEmail = e
-        self.userProfilePicture = pic
+//        self.userProfilePicture = pic
         self.userHikeRecord = hr
         self.userFriends = f
     }
@@ -113,9 +133,10 @@ let routeH: Route = Route(name: "港島徑第八段", description: "這路段覆
 let routeI: Route = Route(name: "元荃古道", description: "元荃古道是當局依照昔日居民往來元朗及荃灣兩地的路線而修建的行山徑，「元」指元朗，而「荃」則指荃灣。這條古道對當時元朗十八鄉的農民來說，是經這路把他們的農作收成運到荃灣的市場販賣，尤其是吉慶橋，是當時居民的必經之橋。", distance: 15.0, expectedTime: 5.0, peak: 414.0, difficulty: 3, bookmarked: 5893, district: ["荃灣區", "屯門區"], startPoint: CLLocationCoordinate2D(latitude: 22.3778, longitude: 114.0931), endPoint: CLLocationCoordinate2D(latitude: 22.4131, longitude: 114.0357), midwayPoints: [])
 let routeJ: Route = Route(name: "衛奕信徑第九段", description: "第九段由九龍坑山山頂出發，經鶴藪水塘、屏風山至八仙嶺，最後以仙姑峰為終點。鶴藪水塘靜美如畫，幽谷翠坡環抱，令人徘徊不去。在分岔口緩上小徑便正式開展八仙嶺山峰縱走之旅，可說是整條衛奕信徑最難走的路段之一。屏風山南面峭壁恍如一道將新界東北及大埔的屏風，走在山脊之上，視野開闊，能360度極目新界東北一帶。八仙嶺以道教八仙為名，由西至東，各山峰依次名為純陽、鍾離、果老、拐李、曹舅、采和、湘子及仙姑峰。各山峰均設有特色指示牌，既可打卡又可打氣。", distance: 10.6, expectedTime: 4.5, peak: 622.4, difficulty: 4, bookmarked: 4392, district: ["大埔區"], startPoint: CLLocationCoordinate2D(latitude: 22.4758, longitude: 114.1705), endPoint: CLLocationCoordinate2D(latitude: 22.4850, longitude: 114.2340), midwayPoints: [MapPoint(name: "石坳山", type: .viewingPoint, coordinate: CLLocationCoordinate2D(latitude: 22.4934, longitude: 114.1779), orderNumber: 1), MapPoint(name: "屏風山", type: .viewingPoint, coordinate: CLLocationCoordinate2D(latitude: 22.4931, longitude: 114.1963), orderNumber: 2)])
 var defaultRouteList: [Route] = [routeA, routeB, routeC, routeD, routeE, routeF, routeG, routeH, routeI, routeJ]
+var routeList: [Route] = []
 
 // User Information for Testing
-let userA_hikeRecords = [HikeRecord(routeReference: routeA, recordedRouteName: "東涌至大澳", recordedDistance: 14.9, recordDate: Date(), recordedTime: 4.5, recordedAveragePace: 2.8, recordedAverageBPM: 118, recordedPeak: 345.0),
+let dafaultHikeRecords = [HikeRecord(routeReference: routeA, recordedRouteName: "東涌至大澳", recordedDistance: 14.9, recordDate: Date(), recordedTime: 4.5, recordedAveragePace: 2.8, recordedAverageBPM: 118, recordedPeak: 345.0),
                          HikeRecord(routeReference: routeB, recordedRouteName: "獅子山、望夫石", recordedDistance: 10.5, recordDate: Date(), recordedTime: 4.5, recordedAveragePace: 2.9, recordedAverageBPM: 122, recordedPeak: 513.0),
                          HikeRecord(routeReference: routeC, recordedRouteName: "山頂至薄扶林水塘", recordedDistance: 8.5, recordDate: Date(), recordedTime: 2.5, recordedAveragePace: 2.8, recordedAverageBPM: 118, recordedPeak: 210),
                          HikeRecord(routeReference: routeD, recordedRouteName: "新娘潭自然教育徑", recordedDistance: 0.8, recordDate: Date(), recordedTime: 1.5, recordedAveragePace: 2.8, recordedAverageBPM: 118, recordedPeak: 59.0),
@@ -125,7 +146,7 @@ let userA_hikeRecords = [HikeRecord(routeReference: routeA, recordedRouteName: "
                          HikeRecord(routeReference: routeH, recordedRouteName: "港島徑第八段", recordedDistance: 14.9, recordDate: Date(), recordedTime: 4.5, recordedAveragePace: 2.8, recordedAverageBPM: 118, recordedPeak: 345),
                          HikeRecord(routeReference: routeI, recordedRouteName: "元荃古道", recordedDistance: 14.9, recordDate: Date(), recordedTime: 4.5, recordedAveragePace: 2.8, recordedAverageBPM: 118, recordedPeak: 345),
                          HikeRecord(routeReference: routeJ, recordedRouteName: "衛奕信徑第九段", recordedDistance: 14.9, recordDate: Date(), recordedTime: 4.5, recordedAveragePace: 2.8, recordedAverageBPM: 118, recordedPeak: 345)]
-let userA: User = User(name: "April", gender: false, birthday: nil, phoneNumber: "11111111", email: "april@gmail.com", profilePicture: nil, hikeRecord: userA_hikeRecords, friends: nil)
+let userA: User = User(name: "April", gender: false, birthday: nil, phoneNumber: "11111111", email: "april@gmail.com", profilePicture: nil, hikeRecord: [], friends: nil)
 let userB: User = User(name: "Bob", gender: true, birthday: nil, phoneNumber: "22222222", email: "bobbob@ymail.com", profilePicture: nil, hikeRecord: [], friends: nil)
 let userC: User = User(name: "Cathy", gender: false, birthday: nil, phoneNumber: "33333333", email: "cathy@gmail.com", profilePicture: nil, hikeRecord: [], friends: nil)
 var userList: [User] = [userA, userB, userC]

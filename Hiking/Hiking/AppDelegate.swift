@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupNotifications(on: application)
         return true
     }
 
@@ -77,5 +78,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+}
+
+
+extension AppDelegate{
+    func setupNotifications(on application:UIApplication){
+        let notificationCenter=UNUserNotificationCenter.current()
+        notificationCenter.delegate = self
+        notificationCenter.requestAuthorization(options: [.alert, .sound]){
+            granted, error in
+            if let error = error{
+                print("Fail to request notification center: \(error.localizedDescription)")
+                return
+            }
+            guard granted else{
+                print("Fail to request notification center: not granted")
+                return
+            }
+            DispatchQueue.main.async {
+                application.registerForRemoteNotifications()
+            }
+        }
+    }
+}
+extension AppDelegate{
+    func application(_ application: UIApplication,didRegisterForRemoteNotificationsWithDeviceToken deviceToken:Data){
+        let tokenParts = deviceToken.map{data-> String in
+            return String(format: "%02.2hhx", data)
+        }
+        let token = tokenParts.joined()
+        print("Device token: \(token)")
+        let bundleID = Bundle.main.bundleIdentifier
+        print("Bundle ID: \(String(describing: bundleID))")
+    }
+    func application(_ application: UIApplication,didFailToRegisterForRemoteNotificationsWithError error:Error){
+        print("Fail to Register For Remote Notifications: \(error.localizedDescription)")
+    }
+    
+}
+extension AppDelegate: UNUserNotificationCenterDelegate{
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler comletionHandler: @escaping (UNNotificationPresentationOptions)-> Void){
+    comletionHandler([.alert, .badge, .sound])
+    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler comletionHandler: @escaping () ->Void) {
+        defer {comletionHandler()}
+        guard response.actionIdentifier == UNNotificationDefaultActionIdentifier else {
+            return
+        }
+        let content = response.notification.request.content
+        print("Title: \(content.title)")
+        print("Body: \(content.body)")
+        
+        if let userInfo = content.userInfo as? [String:Any],
+           let aps = userInfo["aps"] as? [String:Any]{
+            print("aps: \(aps)")
+        }
+            
+        
+    }
+    
 }
 

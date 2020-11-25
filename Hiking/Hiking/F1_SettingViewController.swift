@@ -9,10 +9,15 @@ import UIKit
 
 class F1_SettingViewController: UIViewController {
 
+    var usersDocument: UsersDocument?
+    var usersDocumentURL: URL?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.loadUsersDocument()
+        title = "SETTING"
+        navigationController?.title = "Setting"
     }
     
 
@@ -26,4 +31,29 @@ class F1_SettingViewController: UIViewController {
     }
     */
 
+    
+    // MARK: - Private Functions
+    
+    private func loadUsersDocument() {
+        let fileManager = FileManager.default
+        let dirPaths = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
+        usersDocumentURL = dirPaths[0].appendingPathComponent("users.txt")
+        usersDocument = UsersDocument(fileURL: usersDocumentURL!)
+        
+        if fileManager.fileExists(atPath: usersDocumentURL!.path){
+            usersDocument!.open(completionHandler: {(success:Bool) in
+                if success{
+                    print("Load Users Document Success")
+                }
+            })
+        } else {
+            usersDocument!.save(to: usersDocumentURL!, for: .forCreating, completionHandler: {(success:Bool) in
+                if !success{
+                    print("Failed to create Users Document")
+                }else{
+                    print("Users Document created")
+                }
+            })
+        }
+    }
 }
