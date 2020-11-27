@@ -49,14 +49,14 @@ class C2_2_ActivityDetailsHikeRecordViewController: UIViewController, MKMapViewD
         if self.currentRoute?.midwayPoints.count == 0 {
             self.fetchNextRoute(from: currentRoute!.startPoint, to: currentRoute!.endPoint)
         } else {
-            let tempRoute = self.currentRoute
-            var nextMidwayPoint = tempRoute?.midwayPoints.removeFirst()
-            self.fetchNextRoute(from: currentRoute!.startPoint, to: nextMidwayPoint!.coordinate)
-            while (tempRoute?.midwayPoints.count)! > 0 {
-                self.fetchNextRoute(from: nextMidwayPoint!.coordinate, to: (tempRoute?.midwayPoints.first?.coordinate)!)
-                nextMidwayPoint = tempRoute?.midwayPoints.removeFirst()
+            let tempRoute = Route(name: currentRoute!.name, description: currentRoute!.description, distance: currentRoute!.distance, expectedTime: currentRoute!.expectedTime, peak: currentRoute!.peak, difficulty: currentRoute!.difficulty, bookmarked: currentRoute!.bookmarked, district: currentRoute!.district, startPoint: currentRoute!.startPoint, endPoint: currentRoute!.endPoint, midwayPoints: currentRoute!.midwayPoints)
+            var nextMidwayPoint = tempRoute.midwayPoints.removeFirst()
+            self.fetchNextRoute(from: currentRoute!.startPoint, to: nextMidwayPoint.coordinate)
+            while tempRoute.midwayPoints.count > 0 {
+                self.fetchNextRoute(from: nextMidwayPoint.coordinate, to: (tempRoute.midwayPoints.first?.coordinate)!)
+                nextMidwayPoint = tempRoute.midwayPoints.removeFirst()
             }
-            self.fetchNextRoute(from: nextMidwayPoint!.coordinate, to: currentRoute!.endPoint)
+            self.fetchNextRoute(from: nextMidwayPoint.coordinate, to: currentRoute!.endPoint)
         }
         
         let sP = CLLocation(latitude: self.currentRoute!.startPoint.latitude, longitude: self.currentRoute!.startPoint.longitude)

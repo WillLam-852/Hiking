@@ -61,12 +61,38 @@ class A2_HomeRouteSelectionViewController: UIViewController, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = routeTableView.dequeueReusableCell(withIdentifier: "routeCellID", for: indexPath) as! A2_RouteTableViewCell
-        
+
+        cell.routeImageView.contentMode = .scaleAspectFill
+        switch indexPath.row {
+        case 0:
+            cell.routeImageView.image = UIImage(named: "RouteA")
+        case 1:
+            cell.routeImageView.image = UIImage(named: "RouteB")
+        case 2:
+            cell.routeImageView.image = UIImage(named: "RouteC")
+        case 3:
+            cell.routeImageView.image = UIImage(named: "RouteD")
+        case 4:
+            cell.routeImageView.image = UIImage(named: "RouteE")
+        case 5:
+            cell.routeImageView.image = UIImage(named: "RouteF")
+        case 6:
+            cell.routeImageView.image = UIImage(named: "RouteG")
+        case 7:
+            cell.routeImageView.image = UIImage(named: "RouteH")
+        case 8:
+            cell.routeImageView.image = UIImage(named: "RouteI")
+        case 9:
+            cell.routeImageView.image = UIImage(named: "RouteJ")
+        default:
+            cell.routeImageView.image = UIImage(systemName: "map")
+        }
         cell.routeName_label.text = routeList[indexPath.row].name
         cell.routeDistance_label.text = String(routeList[indexPath.row].distance) + " km"
         cell.routeExpectedTime_label.text = String(routeList[indexPath.row].expectedTime) + " hours"
         cell.routePeak_label.text = "最高點: " + String(routeList[indexPath.row].peak) + " m"
         cell.routeDifficulty_label.text = String(routeList[indexPath.row].difficulty) + " star(s)"
+        cell.bookmarkedLabel.text = String(routeList[indexPath.row].bookmarked)
             
         return cell
     }

@@ -92,6 +92,7 @@ class A_HomePageViewController: UIPageViewController, UIPageViewControllerDelega
                     print("Failed to create Routes Document")
                 }else{
                     print("Routes Document created")
+                    routeList = defaultRouteList
                 }
             })
         }
@@ -138,6 +139,7 @@ class A_HomePageViewController: UIPageViewController, UIPageViewControllerDelega
                     print("Failed to create Hike Records Document")
                 }else{
                     print("Hike Records Document created")
+                    currentUser.userHikeRecord = dafaultHikeRecords
                 }
             })
         }

@@ -13,6 +13,12 @@
 		791DB6182564D6A70085E122 /* A2_2_HomeRouteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791DB6172564D6A70085E122 /* A2_2_HomeRouteDetailViewController.swift */; };
 		792E43B9255932C300D6A788 /* A2_RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E43B8255932C300D6A788 /* A2_RouteTableViewCell.swift */; };
 		792E43C1255BEE3C00D6A788 /* A3_LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E43C0255BEE3C00D6A788 /* A3_LocationSearchTableViewController.swift */; };
+		793352B0256F854D0086CE5C /* E1_CommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793352AF256F854D0086CE5C /* E1_CommunityTableViewCell.swift */; };
+		793352B5256F85680086CE5C /* E2_CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793352B4256F85680086CE5C /* E2_CommunityViewController.swift */; };
+		793352BA256F85A60086CE5C /* PostDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793352B9256F85A60086CE5C /* PostDocument.swift */; };
+		79484667256F86D4002B3CB9 /* E1_CommunityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79484666256F86D4002B3CB9 /* E1_CommunityTableViewController.swift */; };
+		79484677256F9A8B002B3CB9 /* UserNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79484676256F9A8B002B3CB9 /* UserNotification.swift */; };
+		794846822570B766002B3CB9 /* D3_AchievementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794846812570B766002B3CB9 /* D3_AchievementTableViewCell.swift */; };
 		79859C24256BCA7E006A696D /* H1_HikeOnProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79859C23256BCA7E006A696D /* H1_HikeOnProgressViewController.swift */; };
 		79859C29256BCA8C006A696D /* H2_HikePauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79859C28256BCA8C006A696D /* H2_HikePauseViewController.swift */; };
 		79859C31256BCA9A006A696D /* H3_HikeFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79859C30256BCA9A006A696D /* H3_HikeFinishViewController.swift */; };
@@ -38,7 +44,6 @@
 		79FAA8642552AF6E00C0F4BE /* A1_HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAA8632552AF6E00C0F4BE /* A1_HomeViewController.swift */; };
 		79FAA8692552AF8A00C0F4BE /* C1_ActivityOverallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAA8682552AF8A00C0F4BE /* C1_ActivityOverallViewController.swift */; };
 		79FAA86E2552AF9A00C0F4BE /* D1_AchievementMedalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAA86D2552AF9A00C0F4BE /* D1_AchievementMedalViewController.swift */; };
-		79FAA8732552AFAF00C0F4BE /* E1_CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAA8722552AFAF00C0F4BE /* E1_CommunityViewController.swift */; };
 		79FAA8842552B00000C0F4BE /* F1_SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAA8832552B00000C0F4BE /* F1_SettingViewController.swift */; };
 		79FAA8892552B30F00C0F4BE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAA8882552B30F00C0F4BE /* TabBarViewController.swift */; };
 		79FAA8942553AFDA00C0F4BE /* A_HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAA8932553AFDA00C0F4BE /* A_HomePageViewController.swift */; };
@@ -72,6 +77,12 @@
 		791DB6172564D6A70085E122 /* A2_2_HomeRouteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A2_2_HomeRouteDetailViewController.swift; sourceTree = "<group>"; };
 		792E43B8255932C300D6A788 /* A2_RouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A2_RouteTableViewCell.swift; sourceTree = "<group>"; };
 		792E43C0255BEE3C00D6A788 /* A3_LocationSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A3_LocationSearchTableViewController.swift; sourceTree = "<group>"; };
+		793352AF256F854D0086CE5C /* E1_CommunityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E1_CommunityTableViewCell.swift; sourceTree = "<group>"; };
+		793352B4256F85680086CE5C /* E2_CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E2_CommunityViewController.swift; sourceTree = "<group>"; };
+		793352B9256F85A60086CE5C /* PostDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDocument.swift; sourceTree = "<group>"; };
+		79484666256F86D4002B3CB9 /* E1_CommunityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E1_CommunityTableViewController.swift; sourceTree = "<group>"; };
+		79484676256F9A8B002B3CB9 /* UserNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotification.swift; sourceTree = "<group>"; };
+		794846812570B766002B3CB9 /* D3_AchievementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D3_AchievementTableViewCell.swift; sourceTree = "<group>"; };
 		79859C23256BCA7E006A696D /* H1_HikeOnProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H1_HikeOnProgressViewController.swift; sourceTree = "<group>"; };
 		79859C28256BCA8C006A696D /* H2_HikePauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H2_HikePauseViewController.swift; sourceTree = "<group>"; };
 		79859C30256BCA9A006A696D /* H3_HikeFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H3_HikeFinishViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +115,6 @@
 		79FAA8632552AF6E00C0F4BE /* A1_HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A1_HomeViewController.swift; sourceTree = "<group>"; };
 		79FAA8682552AF8A00C0F4BE /* C1_ActivityOverallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C1_ActivityOverallViewController.swift; sourceTree = "<group>"; };
 		79FAA86D2552AF9A00C0F4BE /* D1_AchievementMedalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D1_AchievementMedalViewController.swift; sourceTree = "<group>"; };
-		79FAA8722552AFAF00C0F4BE /* E1_CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E1_CommunityViewController.swift; sourceTree = "<group>"; };
 		79FAA8832552B00000C0F4BE /* F1_SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F1_SettingViewController.swift; sourceTree = "<group>"; };
 		79FAA8882552B30F00C0F4BE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		79FAA8932553AFDA00C0F4BE /* A_HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_HomePageViewController.swift; sourceTree = "<group>"; };
@@ -186,7 +196,9 @@
 				79DCFBEA256E4C4000469596 /* Hiking.entitlements */,
 				79FAA8552552AEB200C0F4BE /* GlobalVariables.swift */,
 				79859C85256CFDD8006A696D /* RecordDocument.swift */,
+				793352B9256F85A60086CE5C /* PostDocument.swift */,
 				79DCFBDC256E413400469596 /* LocalNotificationManager.swift */,
+				79484676256F9A8B002B3CB9 /* UserNotification.swift */,
 				79FAA8882552B30F00C0F4BE /* TabBarViewController.swift */,
 				79FAA8932553AFDA00C0F4BE /* A_HomePageViewController.swift */,
 				79FAA8632552AF6E00C0F4BE /* A1_HomeViewController.swift */,
@@ -204,7 +216,10 @@
 				79FAA86D2552AF9A00C0F4BE /* D1_AchievementMedalViewController.swift */,
 				79E422C22553F005001CE01B /* D2_AchievementChallengeViewController.swift */,
 				79E422CA2553F018001CE01B /* D3_AchievementLeaderboardViewController.swift */,
-				79FAA8722552AFAF00C0F4BE /* E1_CommunityViewController.swift */,
+				794846812570B766002B3CB9 /* D3_AchievementTableViewCell.swift */,
+				79484666256F86D4002B3CB9 /* E1_CommunityTableViewController.swift */,
+				793352AF256F854D0086CE5C /* E1_CommunityTableViewCell.swift */,
+				793352B4256F85680086CE5C /* E2_CommunityViewController.swift */,
 				79FAA8832552B00000C0F4BE /* F1_SettingViewController.swift */,
 				79859C23256BCA7E006A696D /* H1_HikeOnProgressViewController.swift */,
 				79859C28256BCA8C006A696D /* H2_HikePauseViewController.swift */,
@@ -499,8 +514,11 @@
 				79E422BE2553EFE9001CE01B /* D_AchivementPageViewController.swift in Sources */,
 				79E422B62553EEF3001CE01B /* C2_ActivityDetailsViewController.swift in Sources */,
 				791DB6182564D6A70085E122 /* A2_2_HomeRouteDetailViewController.swift in Sources */,
+				793352B5256F85680086CE5C /* E2_CommunityViewController.swift in Sources */,
+				794846822570B766002B3CB9 /* D3_AchievementTableViewCell.swift in Sources */,
 				79FAA81D2552AD1E00C0F4BE /* AppDelegate.swift in Sources */,
 				79043F5A256BB75A00029FE7 /* C2_ActivityDetailsTableViewCell.swift in Sources */,
+				79484667256F86D4002B3CB9 /* E1_CommunityTableViewController.swift in Sources */,
 				79E422CB2553F018001CE01B /* D3_AchievementLeaderboardViewController.swift in Sources */,
 				79FAA8A22553B5CE00C0F4BE /* A2_HomeRouteSelectionViewController.swift in Sources */,
 				79E422B12553EED2001CE01B /* C_ActivityPageViewController.swift in Sources */,
@@ -510,9 +528,11 @@
 				79FAA8642552AF6E00C0F4BE /* A1_HomeViewController.swift in Sources */,
 				79E422C32553F005001CE01B /* D2_AchievementChallengeViewController.swift in Sources */,
 				79FAA81F2552AD1E00C0F4BE /* SceneDelegate.swift in Sources */,
-				79FAA8732552AFAF00C0F4BE /* E1_CommunityViewController.swift in Sources */,
+				793352BA256F85A60086CE5C /* PostDocument.swift in Sources */,
 				79FAA86E2552AF9A00C0F4BE /* D1_AchievementMedalViewController.swift in Sources */,
+				79484677256F9A8B002B3CB9 /* UserNotification.swift in Sources */,
 				79FAA8892552B30F00C0F4BE /* TabBarViewController.swift in Sources */,
+				793352B0256F854D0086CE5C /* E1_CommunityTableViewCell.swift in Sources */,
 				79FAA8942553AFDA00C0F4BE /* A_HomePageViewController.swift in Sources */,
 				79FAA8A72553B5E600C0F4BE /* A3_HomeRouteDrawViewController.swift in Sources */,
 				79859C29256BCA8C006A696D /* H2_HikePauseViewController.swift in Sources */,

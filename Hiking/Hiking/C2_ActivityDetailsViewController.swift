@@ -34,6 +34,32 @@ class C2_ActivityDetailsViewController: UIViewController, UITableViewDelegate, U
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = hikeRecordsTableView.dequeueReusableCell(withIdentifier: "hikeRecordCellID", for: indexPath) as! C2_ActivityDetailsTableViewCell
+        
+        cell.routeImageView.contentMode = .scaleAspectFill
+        switch indexPath.row {
+        case 0:
+            cell.routeImageView.image = UIImage(named: "RouteA")
+        case 1:
+            cell.routeImageView.image = UIImage(named: "RouteB")
+        case 2:
+            cell.routeImageView.image = UIImage(named: "RouteC")
+        case 3:
+            cell.routeImageView.image = UIImage(named: "RouteD")
+        case 4:
+            cell.routeImageView.image = UIImage(named: "RouteE")
+        case 5:
+            cell.routeImageView.image = UIImage(named: "RouteF")
+        case 6:
+            cell.routeImageView.image = UIImage(named: "RouteG")
+        case 7:
+            cell.routeImageView.image = UIImage(named: "RouteH")
+        case 8:
+            cell.routeImageView.image = UIImage(named: "RouteI")
+        case 9:
+            cell.routeImageView.image = UIImage(named: "RouteJ")
+        default:
+            cell.routeImageView.image = UIImage(systemName: "map")
+        }
         let dF = DateFormatter()
         dF.dateFormat = "d MMM yyyy"
         cell.dateLabel.text = dF.string(from: currentUser.userHikeRecord[indexPath.row].recordedDate)

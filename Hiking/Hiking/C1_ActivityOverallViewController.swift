@@ -26,7 +26,7 @@ class C1_ActivityOverallViewController: UIViewController, MKMapViewDelegate {
         for i in currentUser.userHikeRecord {
             totalDistance += i.recordedDistance
             totalTime += i.recordedTime
-            self.showMapRoute(route: i.routeReference)
+            self.showMapRoute(route: i.routeReference ?? routeA)
         }
         
         let totalDistance_attributedText = NSMutableAttributedString(string: String(format: "%.2f", totalDistance), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 32)])
@@ -50,10 +50,12 @@ class C1_ActivityOverallViewController: UIViewController, MKMapViewDelegate {
         if route.midwayPoints.count == 0 {
             self.fetchNextRoute(from: route.startPoint, to: route.endPoint)
         } else {
-            let tempRoute = route
+            let tempRoute = Route(name: route.name, description: route.description, distance: route.distance, expectedTime: route.expectedTime, peak: route.peak, difficulty: route.difficulty, bookmarked: route.bookmarked, district: route.district, startPoint: route.startPoint, endPoint: route.endPoint, midwayPoints: route.midwayPoints)
             var nextMidwayPoint = tempRoute.midwayPoints.removeFirst()
             self.fetchNextRoute(from: route.startPoint, to: nextMidwayPoint.coordinate)
             while (tempRoute.midwayPoints.count) > 0 {
+                print("tempRoute.midwayPoints.count", tempRoute.midwayPoints.count)
+                print("route.midwayPoints.count", route.midwayPoints.count)
                 self.fetchNextRoute(from: nextMidwayPoint.coordinate, to: (tempRoute.midwayPoints.first?.coordinate)!)
                 nextMidwayPoint = tempRoute.midwayPoints.removeFirst()
             }

@@ -28,6 +28,12 @@
 	<string>Reading data just for a test.</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>Writing data just for a test.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app requires camera to take photo</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app requires access to photo library</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app requires access to add photo to library</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

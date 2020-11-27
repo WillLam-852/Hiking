@@ -15,7 +15,6 @@ class A2_2_HomeRouteDetailViewController: UIViewController, CLLocationManagerDel
     var currentRoute: Route?
     
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var containView: UIView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var descriptionTextField: UITextView!
     @IBOutlet weak var distanceLabel: UILabel!
@@ -38,6 +37,10 @@ class A2_2_HomeRouteDetailViewController: UIViewController, CLLocationManagerDel
         audioPlayer.pause()
         audioPlayButton.isHidden = false
         audioPauseButton.isHidden = true
+    }
+    
+    @IBAction func pressedStartButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "startRoutingSegue", sender: self)
     }
     
     override func viewDidLoad() {
@@ -72,8 +75,6 @@ class A2_2_HomeRouteDetailViewController: UIViewController, CLLocationManagerDel
         var frame = self.descriptionTextField.frame
         frame.size.height = self.descriptionTextField.contentSize.height
         self.descriptionTextField.frame = frame
-        
-        self.scrollView.isDirectionalLockEnabled = true
     }
     
     // MARK: - Actions
@@ -90,14 +91,14 @@ class A2_2_HomeRouteDetailViewController: UIViewController, CLLocationManagerDel
         if self.currentRoute?.midwayPoints.count == 0 {
             self.fetchNextRoute(from: currentRoute!.startPoint, to: currentRoute!.endPoint)
         } else {
-            let tempRoute = self.currentRoute
-            var nextMidwayPoint = tempRoute?.midwayPoints.removeFirst()
-            self.fetchNextRoute(from: currentRoute!.startPoint, to: nextMidwayPoint!.coordinate)
-            while (tempRoute?.midwayPoints.count)! > 0 {
-                self.fetchNextRoute(from: nextMidwayPoint!.coordinate, to: (tempRoute?.midwayPoints.first?.coordinate)!)
-                nextMidwayPoint = tempRoute?.midwayPoints.removeFirst()
+            let tempRoute = Route(name: currentRoute!.name, description: currentRoute!.description, distance: currentRoute!.distance, expectedTime: currentRoute!.expectedTime, peak: currentRoute!.peak, difficulty: currentRoute!.difficulty, bookmarked: currentRoute!.bookmarked, district: currentRoute!.district, startPoint: currentRoute!.startPoint, endPoint: currentRoute!.endPoint, midwayPoints: currentRoute!.midwayPoints)
+            var nextMidwayPoint = tempRoute.midwayPoints.removeFirst()
+            self.fetchNextRoute(from: currentRoute!.startPoint, to: nextMidwayPoint.coordinate)
+            while tempRoute.midwayPoints.count > 0 {
+                self.fetchNextRoute(from: nextMidwayPoint.coordinate, to: (tempRoute.midwayPoints.first?.coordinate)!)
+                nextMidwayPoint = tempRoute.midwayPoints.removeFirst()
             }
-            self.fetchNextRoute(from: nextMidwayPoint!.coordinate, to: currentRoute!.endPoint)
+            self.fetchNextRoute(from: nextMidwayPoint.coordinate, to: currentRoute!.endPoint)
         }
         
         let sP = CLLocation(latitude: self.currentRoute!.startPoint.latitude, longitude: self.currentRoute!.startPoint.longitude)
@@ -212,14 +213,14 @@ class A2_2_HomeRouteDetailViewController: UIViewController, CLLocationManagerDel
         return view
     }
     
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "startRoutingSegue" {
+            let target = segue.destination as! H1_HikeOnProgressViewController
+            target.targetDistance = currentRoute!.distance
+            target.defaultRoute = currentRoute!
+        }
     }
-    */
 
 }
