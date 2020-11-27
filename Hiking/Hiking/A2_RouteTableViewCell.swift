@@ -16,6 +16,9 @@ class A2_RouteTableViewCell: UITableViewCell {
     @IBOutlet weak var routePeak_label: UILabel!
     @IBOutlet weak var routeDifficulty_label: UILabel!
     @IBOutlet weak var bookmarkedButton: UIButton!
+    @IBOutlet weak var bookmarkedLabel: UILabel!
+    
+    var isBookmarked = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +32,15 @@ class A2_RouteTableViewCell: UITableViewCell {
     }
     
     @IBAction func pressedBookmarkedButton(_ sender: UIButton) {
+        if !isBookmarked {
+            self.bookmarkedButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+            self.bookmarkedLabel.text = String(Int(self.bookmarkedLabel.text!)!+1)
+            isBookmarked = true
+        } else {
+            self.bookmarkedButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
+            self.bookmarkedLabel.text = String(Int(self.bookmarkedLabel.text!)!-1)
+            isBookmarked = false
+        }
     }
     
 }

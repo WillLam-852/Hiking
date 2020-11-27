@@ -27,11 +27,9 @@ class D_AchivementPageViewController: UIPageViewController, UIPageViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "ACHIEVEMENT"
-        navigationController?.title = "Achievement"
         self.delegate = self
         self.dataSource = self
+        self.navigationController?.isToolbarHidden = true
         
         if let firstVC = pages.first {
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
