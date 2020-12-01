@@ -587,7 +587,7 @@
                                                 <constraint firstItem="tGz-cm-cnt" firstAttribute="top" secondItem="pCI-hi-bne" secondAttribute="bottom" constant="8.5" id="Wv2-Vs-zVh"/>
                                                 <constraint firstItem="rrK-jP-9tN" firstAttribute="leading" secondItem="45J-wP-dhs" secondAttribute="trailing" constant="131.5" id="g3y-1e-qte"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rrK-jP-9tN" secondAttribute="trailing" constant="20" symbolic="YES" id="g3z-QN-npH"/>
-                                                <constraint firstItem="2DJ-Ph-jdi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="45J-wP-dhs" secondAttribute="trailing" symbolic="YES" id="hNd-1J-rXb"/>
+                                                <constraint firstItem="2DJ-Ph-jdi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="45J-wP-dhs" secondAttribute="trailing" constant="8" symbolic="YES" id="hNd-1J-rXb"/>
                                                 <constraint firstItem="pCI-hi-bne" firstAttribute="top" secondItem="FdC-Tf-fl3" secondAttribute="bottom" constant="8.5" id="hUs-Cv-Ruo"/>
                                                 <constraint firstItem="FdC-Tf-fl3" firstAttribute="leading" secondItem="45J-wP-dhs" secondAttribute="trailing" constant="8.5" id="he9-Wa-nsJ"/>
                                                 <constraint firstItem="X2J-Yz-WmA" firstAttribute="leading" secondItem="2DJ-Ph-jdi" secondAttribute="trailing" constant="15" id="iJL-Dh-pmL"/>
@@ -706,7 +706,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pq3-1S-ds7">
-                                <rect key="frame" x="0.0" y="184" width="414" height="678"/>
+                                <rect key="frame" x="0.0" y="180" width="414" height="606"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07i-88-1Ix">
                                 <rect key="frame" x="20" y="140" width="36" height="30"/>
@@ -747,31 +747,306 @@
                                     <action selector="pressedDoneButton:" destination="jTn-BZ-053" eventType="touchUpInside" id="Hj8-dD-k0C"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4yz-N3-8L7">
+                                <rect key="frame" x="24.5" y="796" width="365" height="24"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PfO-FR-Re0">
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTo-23-t96">
+                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="Byb-VB-neM"/>
+                                                    <constraint firstAttribute="width" secondItem="sTo-23-t96" secondAttribute="height" multiplier="1:1" id="pAP-AK-WQs"/>
+                                                </constraints>
+                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="pressedCheckbox_toilet:" destination="jTn-BZ-053" eventType="touchUpInside" id="V1F-IO-xTc"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Toilet" translatesAutoresizingMaskIntoConstraints="NO" id="j8H-fA-B8b">
+                                                <rect key="frame" x="25" y="0.0" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="j8H-fA-B8b" secondAttribute="height" multiplier="1:1" id="Sqd-gJ-K3D"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="j8H-fA-B8b" firstAttribute="width" secondItem="sTo-23-t96" secondAttribute="height" multiplier="6:5" id="Udm-gZ-VDC"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ifo-fK-e8v">
+                                        <rect key="frame" x="79" y="0.0" width="49" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LP7-xz-bf7">
+                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="Bqg-gQ-9uc"/>
+                                                    <constraint firstAttribute="width" secondItem="LP7-xz-bf7" secondAttribute="height" multiplier="1:1" id="h5h-Qy-g3i"/>
+                                                </constraints>
+                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="pressedCheckbox_campsite:" destination="jTn-BZ-053" eventType="touchUpInside" id="9Bg-u4-QnQ"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Campsite" translatesAutoresizingMaskIntoConstraints="NO" id="EVo-p7-zcd">
+                                                <rect key="frame" x="25" y="0.0" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="EVo-p7-zcd" secondAttribute="height" multiplier="1:1" id="kOs-7N-vRq"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="EVo-p7-zcd" firstAttribute="width" secondItem="LP7-xz-bf7" secondAttribute="height" multiplier="6:5" id="7ct-en-d2x"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oDb-4t-JKA">
+                                        <rect key="frame" x="158" y="0.0" width="49" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zW9-ss-eAh">
+                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="zW9-ss-eAh" secondAttribute="height" multiplier="1:1" id="EBa-Hp-nQ3"/>
+                                                    <constraint firstAttribute="width" constant="20" id="l64-h8-cra"/>
+                                                </constraints>
+                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="pressedCheckbox_viewingpoint:" destination="jTn-BZ-053" eventType="touchUpInside" id="WOt-kO-r0M"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fcn-MI-6fc">
+                                                <rect key="frame" x="25" y="0.5" width="24" height="22"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="fcn-MI-6fc" secondAttribute="height" multiplier="1:1" id="cRp-Pu-7lN"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="fcn-MI-6fc" firstAttribute="width" secondItem="zW9-ss-eAh" secondAttribute="height" multiplier="6:5" id="9yA-If-hlq"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="l6C-wg-dW0">
+                                        <rect key="frame" x="237" y="0.0" width="49" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0W-CA-a7R">
+                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="HpU-ZE-CP8"/>
+                                                    <constraint firstAttribute="width" secondItem="h0W-CA-a7R" secondAttribute="height" multiplier="1:1" id="YV1-1R-rvX"/>
+                                                </constraints>
+                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="pressedCheckbox_busstop:" destination="jTn-BZ-053" eventType="touchUpInside" id="7u1-Gs-aVK"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bus.doubledecker" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UnJ-z7-JCd">
+                                                <rect key="frame" x="25" y="-2" width="24" height="26.5"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="UnJ-z7-JCd" secondAttribute="height" multiplier="1:1" id="ELc-aR-p4L"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="UnJ-z7-JCd" firstAttribute="width" secondItem="h0W-CA-a7R" secondAttribute="height" multiplier="6:5" id="tVo-qU-1fP"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qdr-rj-Pit">
+                                        <rect key="frame" x="316" y="0.0" width="49" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqO-Re-8KN">
+                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="GqO-Re-8KN" secondAttribute="height" multiplier="1:1" id="8Z6-ls-nau"/>
+                                                    <constraint firstAttribute="width" constant="20" id="UUe-t5-ukk"/>
+                                                </constraints>
+                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="pressedCheckbox_pier:" destination="jTn-BZ-053" eventType="touchUpInside" id="FWh-Ot-dmq"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pier" translatesAutoresizingMaskIntoConstraints="NO" id="plw-kj-0mp">
+                                                <rect key="frame" x="25" y="0.0" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="plw-kj-0mp" secondAttribute="height" multiplier="1:1" id="ZEC-BO-ZIa"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="plw-kj-0mp" firstAttribute="width" secondItem="GqO-Re-8KN" secondAttribute="height" multiplier="6:5" id="X4O-DO-tGj"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="sKa-nD-vaY">
+                                <rect key="frame" x="24.5" y="828" width="365" height="24"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ddh-ja-GA2">
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kit-Rr-M5E">
+                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="iyg-UL-6tY"/>
+                                                    <constraint firstAttribute="width" secondItem="kit-Rr-M5E" secondAttribute="height" multiplier="1:1" id="ukB-fT-b54"/>
+                                                </constraints>
+                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="pressedCheckbox_beach:" destination="jTn-BZ-053" eventType="touchUpInside" id="99G-kZ-pK9"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="wGc-F9-dJT">
+                                                <rect key="frame" x="25" y="0.0" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="wGc-F9-dJT" secondAttribute="height" multiplier="1:1" id="ixw-Dl-3O1"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wGc-F9-dJT" firstAttribute="width" secondItem="kit-Rr-M5E" secondAttribute="height" multiplier="6:5" id="eh8-hw-HuZ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uRh-xM-Avr">
+                                        <rect key="frame" x="79" y="0.0" width="49" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="651-Mz-qdX">
+                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="651-Mz-qdX" secondAttribute="height" multiplier="1:1" id="LZ1-Xs-IRc"/>
+                                                    <constraint firstAttribute="width" constant="20" id="bxM-yu-NIB"/>
+                                                </constraints>
+                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="pressedCheckbox_sittingoutarea:" destination="jTn-BZ-053" eventType="touchUpInside" id="RCB-uj-DgF"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SittingOutArea" translatesAutoresizingMaskIntoConstraints="NO" id="kP1-wR-pho">
+                                                <rect key="frame" x="25" y="0.0" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="kP1-wR-pho" secondAttribute="height" multiplier="1:1" id="BRv-Gk-scD"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="kP1-wR-pho" firstAttribute="width" secondItem="651-Mz-qdX" secondAttribute="height" multiplier="6:5" id="Ej6-eR-O1z"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vzc-tO-fVO">
+                                        <rect key="frame" x="158" y="0.0" width="49" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Om-rc-zbg">
+                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9Om-rc-zbg" secondAttribute="height" multiplier="1:1" id="TbY-qC-yQr"/>
+                                                    <constraint firstAttribute="width" constant="20" id="vex-hZ-lWV"/>
+                                                </constraints>
+                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="pressedCheckbox_pavilion:" destination="jTn-BZ-053" eventType="touchUpInside" id="NFJ-sl-LH7"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pavilion" translatesAutoresizingMaskIntoConstraints="NO" id="GPf-as-jVc">
+                                                <rect key="frame" x="25" y="0.0" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="GPf-as-jVc" secondAttribute="height" multiplier="1:1" id="MQk-SB-sZ7"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="GPf-as-jVc" firstAttribute="width" secondItem="9Om-rc-zbg" secondAttribute="height" multiplier="6:5" id="baj-IJ-ZAV"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Tfg-9s-eAs">
+                                        <rect key="frame" x="237" y="0.0" width="49" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kx-vD-2dz">
+                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="0kx-vD-2dz" secondAttribute="height" multiplier="1:1" id="FBt-Jb-ZKc"/>
+                                                    <constraint firstAttribute="width" constant="20" id="XM3-9i-ZvI"/>
+                                                </constraints>
+                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="pressedCheckbox_sunrise:" destination="jTn-BZ-053" eventType="touchUpInside" id="NLY-kp-gIb"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunrise.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cdP-Lb-6yf">
+                                                <rect key="frame" x="25" y="-1.5" width="24" height="23.5"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="cdP-Lb-6yf" secondAttribute="height" multiplier="1:1" id="xi5-Gc-HhX"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="cdP-Lb-6yf" firstAttribute="width" secondItem="0kx-vD-2dz" secondAttribute="height" multiplier="6:5" id="uvl-BO-EeL"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xSh-d1-kMv">
+                                        <rect key="frame" x="316" y="0.0" width="49" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFx-B5-sfe">
+                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="69t-eR-2Eq"/>
+                                                    <constraint firstAttribute="width" secondItem="oFx-B5-sfe" secondAttribute="height" multiplier="1:1" id="RbU-iV-dMe"/>
+                                                </constraints>
+                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="pressedCheckbox_stargazing:" destination="jTn-BZ-053" eventType="touchUpInside" id="7cN-Qk-LcY"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon.stars.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="d9M-3L-V9m">
+                                                <rect key="frame" x="25" y="-1" width="24" height="23.5"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="d9M-3L-V9m" secondAttribute="height" multiplier="1:1" id="Akp-2d-Dk1"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="d9M-3L-V9m" firstAttribute="width" secondItem="oFx-B5-sfe" secondAttribute="height" multiplier="6:5" id="oSX-5a-lF6"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0l5-7Y-QBN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="bottom" secondItem="0l5-7Y-QBN" secondAttribute="bottom" id="1qG-4b-7Y8"/>
-                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="trailing" secondItem="0l5-7Y-QBN" secondAttribute="trailing" id="39T-AN-kHV"/>
-                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="leading" secondItem="0l5-7Y-QBN" secondAttribute="leading" id="6Qv-86-fiM"/>
-                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="bottom" secondItem="0l5-7Y-QBN" secondAttribute="bottom" id="8n5-16-xzI"/>
+                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="top" secondItem="07i-88-1Ix" secondAttribute="bottom" constant="10" id="36y-Lr-73c"/>
                             <constraint firstItem="1b6-8W-EpS" firstAttribute="top" secondItem="0l5-7Y-QBN" secondAttribute="top" constant="52" id="9Rw-FE-cd1"/>
                             <constraint firstItem="07i-88-1Ix" firstAttribute="leading" secondItem="0l5-7Y-QBN" secondAttribute="leading" constant="20" id="AQE-zG-Yf2"/>
                             <constraint firstItem="07i-88-1Ix" firstAttribute="top" secondItem="0l5-7Y-QBN" secondAttribute="top" constant="52" id="Cw5-Ck-ZVa"/>
-                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="leading" secondItem="0l5-7Y-QBN" secondAttribute="leading" id="DW3-Nb-yGJ"/>
-                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="trailing" secondItem="0l5-7Y-QBN" secondAttribute="trailing" id="JeM-7A-x8w"/>
+                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="top" secondItem="07i-88-1Ix" secondAttribute="bottom" constant="10" id="DMP-Rp-Hxe"/>
                             <constraint firstItem="1b6-8W-EpS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="07i-88-1Ix" secondAttribute="trailing" constant="8" symbolic="YES" id="N9e-CR-mQm"/>
-                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="leading" secondItem="0l5-7Y-QBN" secondAttribute="leading" id="QeS-Im-A9g"/>
-                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="bottom" secondItem="0l5-7Y-QBN" secondAttribute="bottom" id="S4F-X9-5ud"/>
+                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="leading" secondItem="0l5-7Y-QBN" secondAttribute="leading" id="SL3-0e-VjA"/>
                             <constraint firstItem="wYg-R3-NXM" firstAttribute="top" secondItem="0l5-7Y-QBN" secondAttribute="top" constant="14" id="W3j-1l-nZq"/>
-                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="top" secondItem="07i-88-1Ix" secondAttribute="bottom" constant="14" id="oRF-mg-Kes"/>
+                            <constraint firstItem="4yz-N3-8L7" firstAttribute="top" secondItem="Pq3-1S-ds7" secondAttribute="bottom" constant="10" id="XmN-Ff-Ij0"/>
+                            <constraint firstItem="0l5-7Y-QBN" firstAttribute="bottom" secondItem="sKa-nD-vaY" secondAttribute="bottom" constant="10" id="YFc-z3-2Nr"/>
+                            <constraint firstItem="sKa-nD-vaY" firstAttribute="top" secondItem="4yz-N3-8L7" secondAttribute="bottom" constant="8" id="drR-8h-7pC"/>
+                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="leading" secondItem="0l5-7Y-QBN" secondAttribute="leading" id="ece-y1-lwV"/>
+                            <constraint firstItem="sKa-nD-vaY" firstAttribute="centerX" secondItem="M25-8R-Wva" secondAttribute="centerX" id="fmE-dJ-eup"/>
+                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="trailing" secondItem="0l5-7Y-QBN" secondAttribute="trailing" id="gNK-T5-3s1"/>
+                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="trailing" secondItem="0l5-7Y-QBN" secondAttribute="trailing" id="hra-1q-APN"/>
                             <constraint firstItem="wYg-R3-NXM" firstAttribute="centerX" secondItem="M25-8R-Wva" secondAttribute="centerX" id="oit-eC-d5a"/>
-                            <constraint firstItem="Pq3-1S-ds7" firstAttribute="trailing" secondItem="0l5-7Y-QBN" secondAttribute="trailing" id="puA-Zc-QWi"/>
+                            <constraint firstItem="4yz-N3-8L7" firstAttribute="centerX" secondItem="M25-8R-Wva" secondAttribute="centerX" id="p0w-Gg-SWO"/>
                             <constraint firstItem="0l5-7Y-QBN" firstAttribute="trailing" secondItem="1b6-8W-EpS" secondAttribute="trailing" constant="20" id="ylX-rH-XT6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OKd-FD-HNK"/>
                     <connections>
+                        <outlet property="checkbox_beach" destination="kit-Rr-M5E" id="XpX-5Z-iqJ"/>
+                        <outlet property="checkbox_busstop" destination="h0W-CA-a7R" id="rb2-dL-cIP"/>
+                        <outlet property="checkbox_campsite" destination="LP7-xz-bf7" id="p9S-be-odS"/>
+                        <outlet property="checkbox_pavilion" destination="9Om-rc-zbg" id="loi-hr-p73"/>
+                        <outlet property="checkbox_pier" destination="GqO-Re-8KN" id="zcc-VF-vT1"/>
+                        <outlet property="checkbox_sittingoutarea" destination="651-Mz-qdX" id="sMe-bc-OUe"/>
+                        <outlet property="checkbox_stargazing" destination="oFx-B5-sfe" id="wp1-OW-yLs"/>
+                        <outlet property="checkbox_sunrise" destination="0kx-vD-2dz" id="Isg-Sc-JD8"/>
+                        <outlet property="checkbox_toilet" destination="sTo-23-t96" id="6SS-2T-Xpf"/>
+                        <outlet property="checkbox_viewingpoint" destination="zW9-ss-eAh" id="2Ig-Z5-Lzc"/>
                         <outlet property="doneButton" destination="1b6-8W-EpS" id="uvN-1d-42e"/>
                         <outlet property="mapView" destination="Pq3-1S-ds7" id="Z5S-yJ-OOg"/>
                     </connections>
@@ -1680,7 +1955,7 @@ Cloudy
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="798"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="vuS-mq-Cxw">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="977.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1083.5"/>
                                         <subviews>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IBz-aQ-EOs">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
@@ -1688,8 +1963,282 @@ Cloudy
                                                     <constraint firstAttribute="height" constant="300" id="fuf-Zb-2j3"/>
                                                 </constraints>
                                             </mapView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Ddv-Q0-dMp">
+                                                <rect key="frame" x="34.5" y="329" width="345" height="24"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5ju-NK-AbO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="49" height="24"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwf-YP-nqU">
+                                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="Iwf-YP-nqU" secondAttribute="height" multiplier="1:1" id="Bjf-uK-hfb"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="sTT-V0-4v6"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                                <connections>
+                                                                    <action selector="pressedCheckbox_toilet:" destination="866-bx-KUe" eventType="touchUpInside" id="MBE-C6-5cz"/>
+                                                                    <action selector="pressedCheckbox_toilet:" destination="jTn-BZ-053" eventType="touchUpInside" id="iCg-0Y-OJS"/>
+                                                                </connections>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Toilet" translatesAutoresizingMaskIntoConstraints="NO" id="jRu-Jg-6nq">
+                                                                <rect key="frame" x="25" y="0.0" width="24" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="jRu-Jg-6nq" secondAttribute="height" multiplier="1:1" id="deR-6s-dkr"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="jRu-Jg-6nq" firstAttribute="width" secondItem="Iwf-YP-nqU" secondAttribute="height" multiplier="6:5" id="eBK-Vd-Epr"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tQO-br-ZCX">
+                                                        <rect key="frame" x="74" y="0.0" width="49" height="24"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtk-gZ-pFs">
+                                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="jtk-gZ-pFs" secondAttribute="height" multiplier="1:1" id="QY4-ze-82F"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="VKz-85-yZm"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                                <connections>
+                                                                    <action selector="pressedCheckbox_campsite:" destination="jTn-BZ-053" eventType="touchUpInside" id="9Vh-f9-pP1"/>
+                                                                    <action selector="pressedCheckbox_campsite:" destination="866-bx-KUe" eventType="touchUpInside" id="p48-qs-DaC"/>
+                                                                </connections>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Campsite" translatesAutoresizingMaskIntoConstraints="NO" id="SO6-qr-V01">
+                                                                <rect key="frame" x="25" y="0.0" width="24" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="SO6-qr-V01" secondAttribute="height" multiplier="1:1" id="nng-GC-bbC"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="SO6-qr-V01" firstAttribute="width" secondItem="jtk-gZ-pFs" secondAttribute="height" multiplier="6:5" id="pOg-AT-N8U"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="I8E-MK-atO">
+                                                        <rect key="frame" x="148" y="0.0" width="49" height="24"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOE-67-YDn">
+                                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="7H2-kj-a5S"/>
+                                                                    <constraint firstAttribute="width" secondItem="HOE-67-YDn" secondAttribute="height" multiplier="1:1" id="RHj-CB-IMR"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                                <connections>
+                                                                    <action selector="pressedCheckbox_viewingpoint:" destination="jTn-BZ-053" eventType="touchUpInside" id="jO6-b5-veH"/>
+                                                                    <action selector="pressedCheckbox_viewingpoint:" destination="866-bx-KUe" eventType="touchUpInside" id="z0n-Bk-Vbu"/>
+                                                                </connections>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8a0-sz-6Zb">
+                                                                <rect key="frame" x="25" y="0.5" width="24" height="22"/>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="8a0-sz-6Zb" secondAttribute="height" multiplier="1:1" id="iTD-wC-08c"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="8a0-sz-6Zb" firstAttribute="width" secondItem="HOE-67-YDn" secondAttribute="height" multiplier="6:5" id="NmK-74-IC6"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4lt-MT-F1c">
+                                                        <rect key="frame" x="222" y="0.0" width="49" height="24"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpv-OM-5Om">
+                                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="FyV-hg-sft"/>
+                                                                    <constraint firstAttribute="width" secondItem="Hpv-OM-5Om" secondAttribute="height" multiplier="1:1" id="GyF-Rs-uKJ"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                                <connections>
+                                                                    <action selector="pressedCheckbox_busstop:" destination="jTn-BZ-053" eventType="touchUpInside" id="80w-WN-VWY"/>
+                                                                    <action selector="pressedCheckbox_busstop:" destination="866-bx-KUe" eventType="touchUpInside" id="Htw-9K-9dz"/>
+                                                                </connections>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bus.doubledecker" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DGH-Ht-6N9">
+                                                                <rect key="frame" x="25" y="-2" width="24" height="26.5"/>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="DGH-Ht-6N9" secondAttribute="height" multiplier="1:1" id="4uj-DG-ikv"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="DGH-Ht-6N9" firstAttribute="width" secondItem="Hpv-OM-5Om" secondAttribute="height" multiplier="6:5" id="8oR-jb-rdF"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VF5-m6-cjE">
+                                                        <rect key="frame" x="296" y="0.0" width="49" height="24"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O67-YA-25c">
+                                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="O67-YA-25c" secondAttribute="height" multiplier="1:1" id="5n8-Ku-QgX"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="DUe-Z3-RFx"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                                <connections>
+                                                                    <action selector="pressedCheckbox_pier:" destination="866-bx-KUe" eventType="touchUpInside" id="Tj5-mR-Fjc"/>
+                                                                    <action selector="pressedCheckbox_pier:" destination="jTn-BZ-053" eventType="touchUpInside" id="oFh-jR-fWn"/>
+                                                                </connections>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pier" translatesAutoresizingMaskIntoConstraints="NO" id="zHc-ZV-qn2">
+                                                                <rect key="frame" x="25" y="0.0" width="24" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="zHc-ZV-qn2" secondAttribute="height" multiplier="1:1" id="HJk-mX-gN7"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="zHc-ZV-qn2" firstAttribute="width" secondItem="O67-YA-25c" secondAttribute="height" multiplier="6:5" id="vQJ-4e-fcY"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="5ka-KX-isT">
+                                                <rect key="frame" x="34.5" y="382" width="345" height="24"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Wsn-8m-nRD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="49" height="24"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSJ-lh-qKe">
+                                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="lSJ-lh-qKe" secondAttribute="height" multiplier="1:1" id="NAg-Wd-y9f"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="hLe-fh-Kp5"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                                <connections>
+                                                                    <action selector="pressedCheckbox_beach:" destination="866-bx-KUe" eventType="touchUpInside" id="32Q-y5-lxX"/>
+                                                                    <action selector="pressedCheckbox_beach:" destination="jTn-BZ-053" eventType="touchUpInside" id="wDX-ES-LhR"/>
+                                                                </connections>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="8Ge-lt-Ksg">
+                                                                <rect key="frame" x="25" y="0.0" width="24" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="8Ge-lt-Ksg" secondAttribute="height" multiplier="1:1" id="YWc-oy-Vee"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="8Ge-lt-Ksg" firstAttribute="width" secondItem="lSJ-lh-qKe" secondAttribute="height" multiplier="6:5" id="dgQ-lU-Y3u"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Le0-MK-dXs">
+                                                        <rect key="frame" x="74" y="0.0" width="49" height="24"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhN-kk-eur">
+                                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="UhN-kk-eur" secondAttribute="height" multiplier="1:1" id="vHi-dj-QuU"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="vPW-1p-8hJ"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                                <connections>
+                                                                    <action selector="pressedCheckbox_sittingoutarea:" destination="jTn-BZ-053" eventType="touchUpInside" id="NIn-2V-rfx"/>
+                                                                    <action selector="pressedCheckbox_sittingoutarea:" destination="866-bx-KUe" eventType="touchUpInside" id="jga-ef-UlG"/>
+                                                                </connections>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SittingOutArea" translatesAutoresizingMaskIntoConstraints="NO" id="J9b-g7-W3i">
+                                                                <rect key="frame" x="25" y="0.0" width="24" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="J9b-g7-W3i" secondAttribute="height" multiplier="1:1" id="JdG-nu-OzE"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="J9b-g7-W3i" firstAttribute="width" secondItem="UhN-kk-eur" secondAttribute="height" multiplier="6:5" id="haF-fn-ZvE"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dvd-qh-QQa">
+                                                        <rect key="frame" x="148" y="0.0" width="49" height="24"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5T-u7-2HW">
+                                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="C5T-u7-2HW" secondAttribute="height" multiplier="1:1" id="FAR-Og-z1f"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="kMW-8p-e9c"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                                <connections>
+                                                                    <action selector="pressedCheckbox_pavilion:" destination="jTn-BZ-053" eventType="touchUpInside" id="3in-y7-OO0"/>
+                                                                    <action selector="pressedCheckbox_pavilion:" destination="866-bx-KUe" eventType="touchUpInside" id="gIL-ws-PWD"/>
+                                                                </connections>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pavilion" translatesAutoresizingMaskIntoConstraints="NO" id="iXB-eq-NwG">
+                                                                <rect key="frame" x="25" y="0.0" width="24" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="iXB-eq-NwG" secondAttribute="height" multiplier="1:1" id="k7m-L8-9Xf"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="iXB-eq-NwG" firstAttribute="width" secondItem="C5T-u7-2HW" secondAttribute="height" multiplier="6:5" id="2iN-Rb-ccK"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="84K-1v-lAF">
+                                                        <rect key="frame" x="222" y="0.0" width="49" height="24"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwJ-Ic-h7Z">
+                                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="FwJ-Ic-h7Z" secondAttribute="height" multiplier="1:1" id="2DU-9S-8Ao"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="S4h-85-ByN"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                                <connections>
+                                                                    <action selector="pressedCheckbox_sunrise:" destination="866-bx-KUe" eventType="touchUpInside" id="KSo-n0-obj"/>
+                                                                    <action selector="pressedCheckbox_sunrise:" destination="jTn-BZ-053" eventType="touchUpInside" id="aiO-eb-9wY"/>
+                                                                </connections>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunrise.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HeG-cQ-Hme">
+                                                                <rect key="frame" x="25" y="-1.5" width="24" height="23.5"/>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="HeG-cQ-Hme" secondAttribute="height" multiplier="1:1" id="IM8-aL-uPu"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="HeG-cQ-Hme" firstAttribute="width" secondItem="FwJ-Ic-h7Z" secondAttribute="height" multiplier="6:5" id="QgD-hP-uBS"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="h4j-ij-3bh">
+                                                        <rect key="frame" x="296" y="0.0" width="49" height="24"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EX-hM-tSO">
+                                                                <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="0EX-hM-tSO" secondAttribute="height" multiplier="1:1" id="8OY-HQ-GgD"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="ULE-Me-mbX"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Checkbox_unchecked"/>
+                                                                <connections>
+                                                                    <action selector="pressedCheckbox_stargazing:" destination="jTn-BZ-053" eventType="touchUpInside" id="TIJ-WR-eye"/>
+                                                                    <action selector="pressedCheckbox_stargazing:" destination="866-bx-KUe" eventType="touchUpInside" id="fHN-c9-ecr"/>
+                                                                </connections>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon.stars.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IdU-OM-DSF">
+                                                                <rect key="frame" x="25" y="-1" width="24" height="23.5"/>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="IdU-OM-DSF" secondAttribute="height" multiplier="1:1" id="IPB-at-Vuj"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="IdU-OM-DSF" firstAttribute="width" secondItem="0EX-hM-tSO" secondAttribute="height" multiplier="6:5" id="zew-WV-tdg"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFR-XF-KzC">
-                                                <rect key="frame" x="185" y="329" width="44" height="42"/>
+                                                <rect key="frame" x="185" y="435" width="44" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="44" id="6WM-k9-nhm"/>
                                                     <constraint firstAttribute="height" constant="42" id="71a-zr-YTU"/>
@@ -1700,14 +2249,14 @@ Cloudy
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Un8-Iq-MT1">
-                                                <rect key="frame" x="185" y="400" width="44" height="42"/>
+                                                <rect key="frame" x="185" y="506" width="44" height="42"/>
                                                 <state key="normal" image="pause.circle.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="pressedAudioPauseButton:" destination="866-bx-KUe" eventType="touchUpInside" id="gLy-3m-eaE"/>
                                                 </connections>
                                             </button>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" scrollEnabled="NO" contentInsetAdjustmentBehavior="scrollableAxes" editable="NO" text="DescriptionTextField" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="20n-KM-OIU">
-                                                <rect key="frame" x="20" y="471" width="374" height="200"/>
+                                                <rect key="frame" x="20" y="577" width="374" height="200"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="d53-Hy-HAK"/>
@@ -1717,7 +2266,7 @@ Cloudy
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="HRD-JN-OBe">
-                                                <rect key="frame" x="20" y="700" width="374" height="20.5"/>
+                                                <rect key="frame" x="20" y="806" width="374" height="20.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Distance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCy-MP-yAC">
                                                         <rect key="frame" x="0.0" y="0.0" width="198.5" height="20.5"/>
@@ -1734,7 +2283,7 @@ Cloudy
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="YJp-bR-L2X">
-                                                <rect key="frame" x="20" y="749.5" width="374" height="20.5"/>
+                                                <rect key="frame" x="20" y="855.5" width="374" height="20.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expected Time: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NF-63-7o5">
                                                         <rect key="frame" x="0.0" y="0.0" width="122.5" height="20.5"/>
@@ -1751,7 +2300,7 @@ Cloudy
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="Faw-ki-izM">
-                                                <rect key="frame" x="20" y="799" width="374" height="20.5"/>
+                                                <rect key="frame" x="20" y="905" width="374" height="20.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peak: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stL-j8-p2t">
                                                         <rect key="frame" x="0.0" y="0.0" width="46.5" height="20.5"/>
@@ -1768,7 +2317,7 @@ Cloudy
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="Cwv-aP-vig">
-                                                <rect key="frame" x="20" y="848.5" width="374" height="20.5"/>
+                                                <rect key="frame" x="20" y="954.5" width="374" height="20.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOl-E8-Q6f">
                                                         <rect key="frame" x="0.0" y="0.0" width="77" height="20.5"/>
@@ -1785,7 +2334,7 @@ Cloudy
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="530-d3-Ulq">
-                                                <rect key="frame" x="20" y="898" width="374" height="20.5"/>
+                                                <rect key="frame" x="20" y="1004" width="374" height="20.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="District(s):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6m-vm-h76">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="20.5"/>
@@ -1802,7 +2351,7 @@ Cloudy
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68K-WX-1WD">
-                                                <rect key="frame" x="30" y="947.5" width="354" height="30"/>
+                                                <rect key="frame" x="30" y="1053.5" width="354" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <state key="normal" title="Start">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1823,6 +2372,7 @@ Cloudy
                                             <constraint firstItem="68K-WX-1WD" firstAttribute="leading" secondItem="vuS-mq-Cxw" secondAttribute="leading" constant="30" id="jJv-m5-UmU"/>
                                             <constraint firstItem="HRD-JN-OBe" firstAttribute="width" secondItem="530-d3-Ulq" secondAttribute="width" id="l6M-T8-9Xs"/>
                                             <constraint firstItem="HRD-JN-OBe" firstAttribute="width" secondItem="Faw-ki-izM" secondAttribute="width" id="mac-UP-dEq"/>
+                                            <constraint firstItem="Ddv-Q0-dMp" firstAttribute="width" secondItem="5ka-KX-isT" secondAttribute="width" id="s3W-bv-mJL"/>
                                             <constraint firstAttribute="trailing" secondItem="IBz-aQ-EOs" secondAttribute="trailing" id="soZ-eq-IFX"/>
                                             <constraint firstItem="IBz-aQ-EOs" firstAttribute="top" secondItem="vuS-mq-Cxw" secondAttribute="top" id="v8B-2Z-YjP"/>
                                             <constraint firstItem="HRD-JN-OBe" firstAttribute="width" secondItem="YJp-bR-L2X" secondAttribute="width" id="vkd-qY-3Xf"/>
@@ -1853,6 +2403,16 @@ Cloudy
                     <connections>
                         <outlet property="audioPauseButton" destination="Un8-Iq-MT1" id="veN-O2-dyZ"/>
                         <outlet property="audioPlayButton" destination="tFR-XF-KzC" id="QKv-dM-JGo"/>
+                        <outlet property="checkbox_beach" destination="lSJ-lh-qKe" id="ZIU-hs-2Lm"/>
+                        <outlet property="checkbox_busstop" destination="Hpv-OM-5Om" id="If1-kf-agz"/>
+                        <outlet property="checkbox_campsite" destination="jtk-gZ-pFs" id="RLN-bQ-h0E"/>
+                        <outlet property="checkbox_pavilion" destination="C5T-u7-2HW" id="JNN-H8-wQk"/>
+                        <outlet property="checkbox_pier" destination="O67-YA-25c" id="uOz-xV-9yw"/>
+                        <outlet property="checkbox_sittingoutarea" destination="UhN-kk-eur" id="7bD-H9-7We"/>
+                        <outlet property="checkbox_stargazing" destination="0EX-hM-tSO" id="aN3-ob-s60"/>
+                        <outlet property="checkbox_sunrise" destination="FwJ-Ic-h7Z" id="NhB-JW-rs4"/>
+                        <outlet property="checkbox_toilet" destination="Iwf-YP-nqU" id="bXJ-ga-uZi"/>
+                        <outlet property="checkbox_viewingpoint" destination="HOE-67-YDn" id="H8y-8A-aA2"/>
                         <outlet property="descriptionTextField" destination="20n-KM-OIU" id="NNy-if-JaZ"/>
                         <outlet property="difficultyLabel" destination="iiP-0w-R4D" id="yuh-Rx-uNo"/>
                         <outlet property="distanceLabel" destination="m34-Qi-amB" id="253-wN-Ggm"/>
@@ -1927,7 +2487,6 @@ Cloudy
         <!--Achievement-->
         <scene sceneID="0R7-r4-oE1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XWQ-V9-2Ub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="adK-Yy-Qp2" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Achievement" image="rosette" catalog="system" selectedImage="rosette" id="J1S-SY-tHO"/>
                     <toolbarItems/>
@@ -1939,6 +2498,7 @@ Cloudy
                         <segue destination="d5O-HR-87H" kind="relationship" relationship="rootViewController" id="NBS-p3-Fad"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XWQ-V9-2Ub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1202.8985507246377" y="1672.7678571428571"/>
         </scene>
@@ -2868,24 +3428,34 @@ Cloudy
     <inferredMetricsTieBreakers>
         <segue reference="oRW-Wv-8HM"/>
         <segue reference="taE-c7-dj1"/>
-        <segue reference="2V8-P5-nbp"/>
+        <segue reference="sSS-od-Rs2"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Beach" width="60" height="60"/>
+        <image name="Campsite" width="40" height="40"/>
+        <image name="Checkbox_unchecked" width="60" height="60"/>
+        <image name="Pavilion" width="60" height="60"/>
+        <image name="Pier" width="60" height="60"/>
+        <image name="SittingOutArea" width="60" height="60"/>
+        <image name="Toilet" width="40" height="40"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="bookmark" catalog="system" width="112" height="128"/>
+        <image name="bus.doubledecker" catalog="system" width="125" height="128"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="flag.fill" catalog="system" width="128" height="121"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="mappinline" width="12" height="12"/>
         <image name="mappintime" width="12" height="12"/>
+        <image name="moon.stars.fill" catalog="system" width="128" height="124"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
         <image name="pause.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="play.circle.fill" catalog="system" width="128" height="121"/>
         <image name="rosette" catalog="system" width="106" height="128"/>
         <image name="stop.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="sunrise.fill" catalog="system" width="128" height="97"/>
         <image name="trophyline" width="12" height="12"/>
         <image name="vip-crown-2-fill" width="12" height="12"/>
         <image name="vip-crown-2-line" width="12" height="12"/>
